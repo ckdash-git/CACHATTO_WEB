@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CACHATTO – Secure Unified Digital Workspace</title>
+  <meta name="description" content="Enterprise-grade secure digital workspace. Zero-trust remote access, MFA, SSO, and DLP — no VPN required. Trusted by 3,000+ companies worldwide." />
+  <meta name="keywords" content="secure remote access, digital workspace, zero trust, MFA, SSO, DLP, cybersecurity, enterprise" />
+  <meta property="og:title" content="CACHATTO – Secure Unified Digital Workspace" />
+  <meta property="og:description" content="Enable secure access to business applications from any device, anywhere — without VPN complexity." />
+  <meta property="og:type" content="website" />
+  <!-- Prevent flash of wrong theme — apply before render -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem('cachatto-theme');
+      var preferred = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', saved || preferred);
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230071e3'/><text x='50%' y='56%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='18' fill='white'>C</text></svg>" />
+</head>
+<body>
+
+<!-- ============================================================
+  NAVIGATION
+============================================================ -->
+<nav class="nav" id="mainNav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+
+    <!-- Logo — real SVG asset; CSS filter adapts it per theme -->
+    <a href="#" class="nav__logo" id="logoHome" aria-label="CACHATTO home">
+      <img
+        src="Assets/logo_c1_h_clr.svg"
+        alt="CACHATTO"
+        class="logo-img"
+        width="140"
+        height="28"
+      />
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav__links" role="list">
+      <li><a href="#" id="navHome" aria-current="page">Home</a></li>
+      <li class="nav__item">
+        <a href="#" aria-haspopup="true">Products ▾</a>
+        <div class="nav__dropdown" role="menu">
+          <a href="#" data-product="cachatto" role="menuitem">CACHATTO</a>
+          <a href="#" data-product="ninjaconnect" role="menuitem">NinjaConnect Telework</a>
+          <a href="#" data-product="ninjaism" role="menuitem">NinjaConnect ISM</a>
+        </div>
+      </li>
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#company">Company</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!-- Right-side controls: theme toggle + CTA -->
+    <div class="nav__controls">
+      <!-- THEME TOGGLE -->
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        aria-label="Toggle colour theme"
+        title="Switch between dark and light mode"
+      >
+        <span class="theme-toggle__icon" id="themeIcon" aria-hidden="true">🌙</span>
+        <div class="theme-toggle__track" aria-hidden="true">
+          <div class="theme-toggle__thumb"></div>
+        </div>
+        <span class="theme-toggle__label" id="themeLabel">Dark</span>
+      </button>
+
+      <a href="#contact" class="nav__cta" id="navCta">Request Demo</a>
+    </div>
+
+    <button class="nav__hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile nav overlay -->
+<div class="nav__mobile" id="mobileNav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <button class="nav__mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+  <!-- Mobile nav logo -->
+  <a href="#" id="mNavHome" style="margin-bottom:8px;">
+    <img src="Assets/logo_c1_h_clr.svg" alt="CACHATTO" class="footer__logo-img" width="130" height="26" />
+  </a>
+  <a href="#" data-product="cachatto" class="mobile-product">CACHATTO</a>
+  <a href="#" data-product="ninjaconnect" class="mobile-product">NinjaConnect Telework</a>
+  <a href="#" data-product="ninjaism" class="mobile-product">NinjaConnect ISM</a>
+  <a href="#solutions">Solutions</a>
+  <a href="#resources">Resources</a>
+  <a href="#company">Company</a>
+  <a href="#contact">Contact</a>
+  <!-- Theme toggle duplicate inside mobile menu -->
+  <button class="theme-toggle" id="mobileThemeToggle" aria-label="Toggle colour theme">
+    <span class="theme-toggle__icon" id="mobileThemeIcon" aria-hidden="true">🌙</span>
+    <div class="theme-toggle__track" aria-hidden="true">
+      <div class="theme-toggle__thumb"></div>
+    </div>
+    <span id="mobileThemeLabel">Dark mode</span>
+  </button>
+  <a href="#contact" class="btn-primary" style="margin-top:16px;">Request Demo</a>
+</div>
+
+
+<!-- ============================================================
+  HOME PAGE
+============================================================ -->
+<div id="homePage" class="page active">
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero section">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__inner">
+
+      <div class="hero__badge fade-in">
+        Enterprise-Ready · Zero Trust Security
+      </div>
+
+      <h1 class="hero__headline fade-in stagger-1">
+        Secure <em>Unified</em><br>Digital Workspace
+      </h1>
+
+      <p class="hero__sub fade-in stagger-2">
+        Frictionless, secure access to business applications and data —
+        from any device, anywhere, without VPN complexity.
+      </p>
+
+      <div class="hero__ctas fade-in stagger-3">
+        <a href="#contact" class="btn-primary" id="heroGetStarted">
+          Get Started
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#products" class="btn-outline" id="heroLearnMore">Learn More</a>
+      </div>
+
+      <!-- Dashboard illustration -->
+      <div class="hero__visual fade-in stagger-3" aria-hidden="true">
+        <div class="hero__dashboard">
+          <div class="dash-header">
+            <div class="dash-dot red"></div>
+            <div class="dash-dot yellow"></div>
+            <div class="dash-dot green"></div>
+            <div class="dash-title">CACHATTO Security Console · Live</div>
+          </div>
+          <div class="dash-grid">
+            <div class="dash-card">
+              <div class="dash-card__label">Active Sessions</div>
+              <div class="dash-card__val">12,847</div>
+              <div class="dash-card__sub">↑ 4.2% today</div>
+            </div>
+            <div class="dash-card">
+              <div class="dash-card__label">Threats Blocked</div>
+              <div class="dash-card__val">3,291</div>
+              <div class="dash-card__sub">Real-time ✓</div>
+            </div>
+            <div class="dash-card">
+              <div class="dash-card__label">Policy Violations</div>
+              <div class="dash-card__val">0</div>
+              <div class="dash-card__sub warn">All clear ✓</div>
+            </div>
+          </div>
+          <div class="dash-stat-row">
+            <div class="dash-stat">
+              <div class="dash-stat__icon blue">🔐</div>
+              <div class="dash-stat__text">
+                <strong>MFA Enforced</strong>
+                All 3,000+ users protected
+              </div>
+            </div>
+            <div class="dash-stat">
+              <div class="dash-stat__icon green">✅</div>
+              <div class="dash-stat__text">
+                <strong>Zero Data Leaks</strong>
+                DLP policies active
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BADGES -->
+  <div class="trust-badges" aria-label="Certifications and compliance">
+    <div class="trust-badges__inner">
+      <div class="trust-badge"><span class="trust-badge__icon">🔒</span> ISO 27001 Certified</div>
+      <div class="trust-badge"><span class="trust-badge__icon">🛡️</span> SOC 2 Type II</div>
+      <div class="trust-badge"><span class="trust-badge__icon">✅</span> GDPR Compliant</div>
+      <div class="trust-badge"><span class="trust-badge__icon">🏆</span> FIDO2 / WebAuthn</div>
+      <div class="trust-badge"><span class="trust-badge__icon">⚡</span> 99.99% Uptime SLA</div>
+    </div>
+  </div>
+
+  <!-- CLIENT LOGO CAROUSEL -->
+  <section class="logos" aria-label="Trusted by enterprise clients">
+    <p class="logos__label">Trusted by 3,000+ organisations across 40+ countries</p>
+    <div class="logos__track-wrap">
+      <div class="logos__track" aria-hidden="true">
+        <span class="logo-item">SoftBank</span>
+        <span class="logo-item">Mitsubishi</span>
+        <span class="logo-item">Fujitsu</span>
+        <span class="logo-item">Hitachi</span>
+        <span class="logo-item">NTT Data</span>
+        <span class="logo-item">Panasonic</span>
+        <span class="logo-item">Toyota</span>
+        <span class="logo-item">Rakuten</span>
+        <!-- duplicate for seamless loop -->
+        <span class="logo-item">SoftBank</span>
+        <span class="logo-item">Mitsubishi</span>
+        <span class="logo-item">Fujitsu</span>
+        <span class="logo-item">Hitachi</span>
+        <span class="logo-item">NTT Data</span>
+        <span class="logo-item">Panasonic</span>
+        <span class="logo-item">Toyota</span>
+        <span class="logo-item">Rakuten</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products section--dark" id="products" aria-labelledby="productsHeading">
+    <div class="section__header">
+      <p class="section__eyebrow">Our Products</p>
+      <h2 class="section__title" id="productsHeading">Enterprise Security Suite</h2>
+      <p class="section__desc">
+        Three purpose-built solutions that cover every dimension of your secure digital workspace strategy.
+      </p>
+    </div>
+    <div class="products__grid">
+
+      <article class="product-card fade-in" aria-label="CACHATTO product">
+        <div class="product-card__image">
+          <img src="Assets/device_crd.webp" alt="CACHATTO secure remote access dashboard on laptop" loading="lazy" />
+        </div>
+        <span class="product-card__tag">Remote Access</span>
+        <h3 class="product-card__title">CACHATTO</h3>
+        <p class="product-card__sub">Clientless, browser-based secure remote access to corporate apps with zero infrastructure changes.</p>
+        <ul class="product-card__features">
+          <li>No VPN, no client software</li>
+          <li>Multi-Factor Authentication</li>
+          <li>Data Loss Prevention (DLP)</li>
+          <li>Single Sign-On (SSO)</li>
+          <li>End-to-end encryption</li>
+        </ul>
+        <a href="#" class="pill-link" data-product="cachatto" id="productCachatto">Learn more ›</a>
+      </article>
+
+      <article class="product-card fade-in stagger-1" aria-label="NinjaConnect Telework">
+        <div class="product-card__image">
+          <img src="Assets/device_ncvpn_c1.webp" alt="NinjaConnect VPN telework client on Windows laptop" loading="lazy" />
+        </div>
+        <span class="product-card__tag">Telework</span>
+        <h3 class="product-card__title">NinjaConnect Telework</h3>
+        <p class="product-card__sub">Fully managed telework environment with hardware client delivery and unified policy control.</p>
+        <ul class="product-card__features">
+          <li>Managed hardware endpoints</li>
+          <li>Centralised policy dashboard</li>
+          <li>Screen capture prevention</li>
+          <li>BYOD &amp; corporate control</li>
+          <li>Real-time session monitoring</li>
+        </ul>
+        <a href="#" class="pill-link" data-product="ninjaconnect" id="productNinja">Learn more ›</a>
+      </article>
+
+      <article class="product-card fade-in stagger-2" aria-label="NinjaConnect ISM">
+        <div class="product-card__image">
+          <img src="Assets/device_cscad.webp" alt="NinjaConnect ISM multi-application dashboard" loading="lazy" />
+        </div>
+        <span class="product-card__tag">Information Security</span>
+        <h3 class="product-card__title">NinjaConnect ISM</h3>
+        <p class="product-card__sub">Information Security Management for regulated industries — compliance-ready out of the box.</p>
+        <ul class="product-card__features">
+          <li>Regulatory compliance (ISO/NIST)</li>
+          <li>Audit trail &amp; reporting</li>
+          <li>Role-based access control</li>
+          <li>Anomaly detection &amp; alerts</li>
+          <li>Data classification engine</li>
+        </ul>
+        <a href="#" class="pill-link" data-product="ninjaism" id="productISM">Learn more ›</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats" aria-labelledby="statsHeading">
+    <div class="container">
+      <div class="section__header" style="margin-bottom:var(--s5);">
+        <p class="section__eyebrow">By the Numbers</p>
+        <h2 class="section__title" id="statsHeading">Proven at Enterprise Scale</h2>
+      </div>
+      <div class="stats__grid">
+        <div class="stat-item fade-in">
+          <div class="stat-item__val"><span class="counter" data-target="20">0</span><span class="accent-num">+</span></div>
+          <div class="stat-item__label">Years of innovation</div>
+        </div>
+        <div class="stat-item fade-in stagger-1">
+          <div class="stat-item__val"><span class="counter" data-target="3000">0</span><span class="accent-num">+</span></div>
+          <div class="stat-item__label">Enterprise customers</div>
+        </div>
+        <div class="stat-item fade-in stagger-2">
+          <div class="stat-item__val"><span class="counter" data-target="5">0</span><span class="accent-num">M+</span></div>
+          <div class="stat-item__label">End users protected</div>
+        </div>
+        <div class="stat-item fade-in stagger-3">
+          <div class="stat-item__val"><span class="counter" data-target="40">0</span><span class="accent-num">+</span></div>
+          <div class="stat-item__label">Countries deployed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features section--dark" id="solutions" aria-labelledby="featuresHeading">
+    <div class="section__header">
+      <p class="section__eyebrow">Core Capabilities</p>
+      <h2 class="section__title" id="featuresHeading">Security Without Compromise</h2>
+      <p class="section__desc">Every feature is engineered to eliminate complexity while maximising protection.</p>
+    </div>
+    <div class="features__grid container">
+      <article class="feature-card fade-in">
+        <div class="feature-card__icon">🔑</div>
+        <h3 class="feature-card__title">Multi-Factor Authentication</h3>
+        <p class="feature-card__desc">TOTP, push notifications, FIDO2 hardware keys — layered authentication that stops credential theft cold.</p>
+      </article>
+      <article class="feature-card fade-in stagger-1">
+        <div class="feature-card__icon">🎯</div>
+        <h3 class="feature-card__title">Single Sign-On (SSO)</h3>
+        <p class="feature-card__desc">One identity, every app. SAML 2.0 and OIDC integration with any IdP — Active Directory, Okta, Azure AD.</p>
+      </article>
+      <article class="feature-card fade-in stagger-2">
+        <div class="feature-card__icon">🛡️</div>
+        <h3 class="feature-card__title">Data Loss Prevention</h3>
+        <p class="feature-card__desc">Block file downloads, screenshots, clipboard actions, and print operations per policy — granularly.</p>
+      </article>
+      <article class="feature-card fade-in">
+        <div class="feature-card__icon">⚡</div>
+        <h3 class="feature-card__title">No VPN Required</h3>
+        <p class="feature-card__desc">Proxy-based architecture means zero firewall changes, zero port forwarding, zero client installation.</p>
+      </article>
+      <article class="feature-card fade-in stagger-1">
+        <div class="feature-card__icon">🔒</div>
+        <h3 class="feature-card__title">Zero Trust Architecture</h3>
+        <p class="feature-card__desc">Never trust, always verify. Every request is authenticated, authorised, and encrypted — every time.</p>
+      </article>
+      <article class="feature-card fade-in stagger-2">
+        <div class="feature-card__icon">☁️</div>
+        <h3 class="feature-card__title">Elastic Scalability</h3>
+        <p class="feature-card__desc">Auto-scaling cloud handles 100 to 500,000 concurrent users without performance degradation.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how" aria-labelledby="howHeading">
+    <div class="section__header">
+      <p class="section__eyebrow">How It Works</p>
+      <h2 class="section__title" id="howHeading">Up and Running in 3 Steps</h2>
+      <p class="section__desc">Deploy enterprise-grade security in days, not months — no hardware, no network changes.</p>
+    </div>
+    <div class="how__steps container">
+      <div class="how-step fade-in">
+        <div class="how-step__num">1</div>
+        <h3 class="how-step__title">Connect Your Applications</h3>
+        <p class="how-step__desc">Register internal apps via our secure connector. No firewall rules. Works with any web, RDP, or SSH resource.</p>
+      </div>
+      <div class="how-step fade-in stagger-1">
+        <div class="how-step__num">2</div>
+        <h3 class="how-step__title">Configure Identity &amp; Policies</h3>
+        <p class="how-step__desc">Sync your directory, set MFA requirements, define DLP rules, and map roles — all in one policy console.</p>
+      </div>
+      <div class="how-step fade-in stagger-2">
+        <div class="how-step__num">3</div>
+        <h3 class="how-step__title">Empower Your Workforce</h3>
+        <p class="how-step__desc">Users access everything securely from any browser. IT gets real-time visibility. Everyone stays productive.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section class="cases" id="resources" aria-labelledby="casesHeading">
+    <div class="section__header">
+      <p class="section__eyebrow">Case Studies</p>
+      <h2 class="section__title" id="casesHeading">Results That Speak</h2>
+      <p class="section__desc">Real deployments. Measurable outcomes. Across regulated industries.</p>
+    </div>
+    <div class="cases__grid container">
+      <article class="case-card fade-in">
+        <div class="case-card__thumb finance">💰</div>
+        <div class="case-card__body">
+          <p class="case-card__tag">Financial Services</p>
+          <h3 class="case-card__title">Regional Bank Eliminates VPN Sprawl</h3>
+          <p class="case-card__desc">A 12,000-employee bank replaced 6 legacy VPN systems with CACHATTO, reducing IT overhead by 60% and achieving zero security incidents in 18 months.</p>
+          <a href="#" class="read-more">Read case study ›</a>
+        </div>
+      </article>
+      <article class="case-card fade-in stagger-1">
+        <div class="case-card__thumb health">🏥</div>
+        <div class="case-card__body">
+          <p class="case-card__tag">Healthcare</p>
+          <h3 class="case-card__title">Hospital Network Achieves HIPAA Compliance</h3>
+          <p class="case-card__desc">500-bed hospital group deployed NinjaConnect ISM to secure EHR access for 3,500 clinicians — passing HIPAA audit first try, with full DLP controls.</p>
+          <a href="#" class="read-more">Read case study ›</a>
+        </div>
+      </article>
+      <article class="case-card fade-in stagger-2">
+        <div class="case-card__thumb govt">🏛️</div>
+        <div class="case-card__body">
+          <p class="case-card__tag">Government</p>
+          <h3 class="case-card__title">Ministry Deploys Nationwide Telework</h3>
+          <p class="case-card__desc">A national government ministry rolled out NinjaConnect Telework to 18,000 civil servants in 72 hours — securing classified data access with hardware-managed endpoints.</p>
+          <a href="#" class="read-more">Read case study ›</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials section--dark" aria-labelledby="testiHeading">
+    <div class="section__header">
+      <p class="section__eyebrow">Testimonials</p>
+      <h2 class="section__title" id="testiHeading">Trusted by Security Leaders</h2>
+    </div>
+    <div class="testimonials__grid container">
+      <article class="testi-card fade-in">
+        <div class="testi-card__stars">★★★★★</div>
+        <p class="testi-card__quote">CACHATTO gave us the security posture of a zero-trust architecture without the 18-month implementation timeline. We were live in three weeks, and our CISO finally slept soundly.</p>
+        <div class="testi-card__author">
+          <div class="testi-card__avatar" style="background:linear-gradient(135deg,#0071e3,#2997ff);">TK</div>
+          <div>
+            <div class="testi-card__name">Takashi Kondo</div>
+            <div class="testi-card__role">CISO · Sumitomo Financial Group</div>
+          </div>
+        </div>
+      </article>
+      <article class="testi-card fade-in stagger-1">
+        <div class="testi-card__stars">★★★★★</div>
+        <p class="testi-card__quote">The DLP controls are exceptional. Our clinical staff can access patient records remotely with no risk of data leaving the secure boundary. Compliance has never been this effortless.</p>
+        <div class="testi-card__author">
+          <div class="testi-card__avatar" style="background:linear-gradient(135deg,#059669,#34d399);">SM</div>
+          <div>
+            <div class="testi-card__name">Dr. Sarah Mercer</div>
+            <div class="testi-card__role">IT Director · MedCore Health Systems</div>
+          </div>
+        </div>
+      </article>
+      <article class="testi-card fade-in stagger-2">
+        <div class="testi-card__stars">★★★★★</div>
+        <p class="testi-card__quote">We scaled from 500 to 15,000 remote users in under 48 hours during the pandemic. No other vendor could have done that. CACHATTO's architecture simply works.</p>
+        <div class="testi-card__author">
+          <div class="testi-card__avatar" style="background:linear-gradient(135deg,#7c3aed,#a78bfa);">RY</div>
+          <div>
+            <div class="testi-card__name">Ryo Yamamoto</div>
+            <div class="testi-card__role">VP Engineering · NTT Data Corporation</div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" aria-labelledby="faqHeading">
+    <div class="section__header">
+      <p class="section__eyebrow">FAQ</p>
+      <h2 class="section__title" id="faqHeading">Frequently Asked Questions</h2>
+    </div>
+    <div class="faq__list" role="list">
+      <div class="faq__item" role="listitem">
+        <button class="faq__q" aria-expanded="false">
+          Do I need to install a VPN or change firewall rules?
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="faq__a">No. CACHATTO uses a reverse-proxy architecture that requires zero firewall changes, zero open inbound ports, and zero client software installation. Your existing network topology remains completely unchanged.</div>
+      </div>
+      <div class="faq__item" role="listitem">
+        <button class="faq__q" aria-expanded="false">
+          Which identity providers (IdPs) are supported?
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="faq__a">CACHATTO integrates via SAML 2.0 and OIDC: Microsoft Azure AD / Entra ID, Okta, Google Workspace, Active Directory (on-premise via LDAP), Ping Identity, and more. Custom SAML integrations are available on Enterprise plans.</div>
+      </div>
+      <div class="faq__item" role="listitem">
+        <button class="faq__q" aria-expanded="false">
+          How does CACHATTO handle data residency and compliance?
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="faq__a">CACHATTO operates data centres in Japan, US, EU, and APAC. You choose where your data is processed and stored. We are ISO 27001 certified, SOC 2 Type II audited, GDPR compliant, and support HIPAA and PCI-DSS.</div>
+      </div>
+      <div class="faq__item" role="listitem">
+        <button class="faq__q" aria-expanded="false">
+          What is the typical deployment timeline?
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="faq__a">Most customers are fully operational within 1–3 weeks. Our onboarding team handles integration, directory sync, and policy configuration with a dedicated CSM assigned to every enterprise account.</div>
+      </div>
+      <div class="faq__item" role="listitem">
+        <button class="faq__q" aria-expanded="false">
+          Is CACHATTO suitable for businesses of all sizes?
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <div class="faq__a">Yes. CACHATTO scales from 10 to 500,000+ users. SMB plans start with simple self-serve setup; Enterprise plans include volume licensing, dedicated infrastructure, custom SLA, and 24/7 NOC support.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner" id="contact" aria-labelledby="ctaHeading">
+    <div class="cta-banner__inner">
+      <h2 class="cta-banner__title" id="ctaHeading">Start Securing Your Workforce Today</h2>
+      <p class="cta-banner__sub">Join 3,000+ enterprises. No credit card required. Live in days, not months.</p>
+      <div class="cta-banner__ctas">
+        <a href="mailto:sales@cachatto.com" class="btn-primary" id="ctaDemo">
+          Request a Demo
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="tel:+813-0000-0000" class="btn-outline" id="ctaCall">Talk to Sales</a>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /#homePage -->
+
+
+<!-- ============================================================
+  PRODUCT PAGE: CACHATTO
+============================================================ -->
+<div id="page-cachatto" class="page" aria-label="CACHATTO product page">
+  <button class="back-btn" data-back="home">← Back to Home</button>
+  <section class="product-hero section--dark" aria-labelledby="cachattoPH">
+    <div>
+      <p class="product-hero__label">Remote Access</p>
+      <h1 class="product-hero__title" id="cachattoPH">CACHATTO</h1>
+      <p class="product-hero__desc">Clientless, browser-based secure remote access — without VPN complexity or infrastructure changes.</p>
+      <div class="hero__ctas"><a href="mailto:sales@cachatto.com" class="btn-primary">Request Demo</a><a href="#" class="btn-outline">View Datasheet</a></div>
+    </div>
+  </section>
+  <section class="features section--dark" aria-labelledby="cachattoFeat">
+    <div class="section__header"><p class="section__eyebrow">Core Features</p><h2 class="section__title" id="cachattoFeat">Everything You Need</h2></div>
+    <div class="features__grid container">
+      <article class="feature-card fade-in"><div class="feature-card__icon">🔑</div><h3 class="feature-card__title">MFA &amp; Passwordless</h3><p class="feature-card__desc">TOTP, SMS, push, and FIDO2 hardware keys with adaptive risk-based authentication policies.</p></article>
+      <article class="feature-card fade-in stagger-1"><div class="feature-card__icon">🎯</div><h3 class="feature-card__title">Single Sign-On</h3><p class="feature-card__desc">SAML 2.0 and OIDC integration. One login for all apps — web, RDP, SSH, VDI, and more.</p></article>
+      <article class="feature-card fade-in stagger-2"><div class="feature-card__icon">🛡️</div><h3 class="feature-card__title">Data Loss Prevention</h3><p class="feature-card__desc">Block downloads, clipboard, screenshots, and print at the session level — per user, group, or app.</p></article>
+      <article class="feature-card fade-in"><div class="feature-card__icon">⚡</div><h3 class="feature-card__title">No-Client Architecture</h3><p class="feature-card__desc">All access via standard browser. Zero endpoint agent. Works on managed and unmanaged devices alike.</p></article>
+      <article class="feature-card fade-in stagger-1"><div class="feature-card__icon">📊</div><h3 class="feature-card__title">Audit &amp; Compliance</h3><p class="feature-card__desc">Immutable session logs, screen-recording replay, and exportable compliance reports out of the box.</p></article>
+      <article class="feature-card fade-in stagger-2"><div class="feature-card__icon">☁️</div><h3 class="feature-card__title">Cloud &amp; On-Prem</h3><p class="feature-card__desc">Deploy to managed cloud or your own private cloud. Hybrid models supported for regulated sectors.</p></article>
+    </div>
+  </section>
+  <section class="how" aria-labelledby="cachattoHow">
+    <div class="section__header"><p class="section__eyebrow">How It Works</p><h2 class="section__title" id="cachattoHow">Three Steps to Zero Trust</h2></div>
+    <div class="how__steps container">
+      <div class="how-step fade-in"><div class="how-step__num">1</div><h3 class="how-step__title">Register Apps</h3><p class="how-step__desc">Point CACHATTO at any internal URL, RDP host, or SSH server. No agents, no port changes.</p></div>
+      <div class="how-step fade-in stagger-1"><div class="how-step__num">2</div><h3 class="how-step__title">Set Identity Policy</h3><p class="how-step__desc">Sync your AD/IdP. Define MFA, device trust, and access policies in minutes.</p></div>
+      <div class="how-step fade-in stagger-2"><div class="how-step__num">3</div><h3 class="how-step__title">Go Live</h3><p class="how-step__desc">Users log in through their browser, see exactly the apps they're permitted — nothing more.</p></div>
+    </div>
+  </section>
+  <section class="cta-banner" aria-labelledby="cachattoCtaH">
+    <div class="cta-banner__inner">
+      <h2 class="cta-banner__title" id="cachattoCtaH">Ready to Go Clientless?</h2>
+      <p class="cta-banner__sub">See CACHATTO live in a personalised 30-minute demo.</p>
+      <div class="cta-banner__ctas">
+        <a href="mailto:sales@cachatto.com" class="btn-primary">Request Demo</a>
+        <a href="#" class="btn-outline" data-back="home">Back to Home</a>
+      </div>
+    </div>
+  </section>
+</div><!-- /#page-cachatto -->
+
+
+<!-- ============================================================
+  PRODUCT PAGE: NinjaConnect Telework
+============================================================ -->
+<div id="page-ninjaconnect" class="page" aria-label="NinjaConnect Telework product page">
+  <button class="back-btn" data-back="home">← Back to Home</button>
+  <section class="product-hero section--dark" aria-labelledby="ninjaPH">
+    <div>
+      <p class="product-hero__label">Telework Solution</p>
+      <h1 class="product-hero__title" id="ninjaPH">NinjaConnect Telework</h1>
+      <p class="product-hero__desc">Fully managed, hardware-delivered telework environments with centralised security and policy control.</p>
+      <div class="hero__ctas"><a href="mailto:sales@cachatto.com" class="btn-primary">Request Demo</a><a href="#" class="btn-outline">View Datasheet</a></div>
+    </div>
+  </section>
+  <section class="features section--dark" aria-labelledby="ninjaFeat">
+    <div class="section__header"><p class="section__eyebrow">Core Features</p><h2 class="section__title" id="ninjaFeat">Complete Telework Control</h2></div>
+    <div class="features__grid container">
+      <article class="feature-card fade-in"><div class="feature-card__icon">💻</div><h3 class="feature-card__title">Managed Endpoint Delivery</h3><p class="feature-card__desc">Pre-configured secure hardware shipped directly to employees. IT retains full remote management.</p></article>
+      <article class="feature-card fade-in stagger-1"><div class="feature-card__icon">📋</div><h3 class="feature-card__title">Centralised Policy Console</h3><p class="feature-card__desc">Define and enforce security policies across all telework endpoints from a single dashboard.</p></article>
+      <article class="feature-card fade-in stagger-2"><div class="feature-card__icon">🚫</div><h3 class="feature-card__title">Screen Capture Prevention</h3><p class="feature-card__desc">Hardware-level controls prevent screenshots, video recording, and screen-sharing of sensitive content.</p></article>
+      <article class="feature-card fade-in"><div class="feature-card__icon">👥</div><h3 class="feature-card__title">BYOD Integration</h3><p class="feature-card__desc">Support employee-owned devices with containerised corporate profiles — work and personal data separate.</p></article>
+      <article class="feature-card fade-in stagger-1"><div class="feature-card__icon">📡</div><h3 class="feature-card__title">Real-Time Monitoring</h3><p class="feature-card__desc">Live session visibility, anomaly alerts, and productivity analytics without employee privacy invasion.</p></article>
+      <article class="feature-card fade-in stagger-2"><div class="feature-card__icon">🔄</div><h3 class="feature-card__title">Automatic Updates</h3><p class="feature-card__desc">Security patches and policy updates deployed silently OTA. Endpoints stay current without user intervention.</p></article>
+    </div>
+  </section>
+  <section class="cta-banner" aria-labelledby="ninjaCtaH">
+    <div class="cta-banner__inner">
+      <h2 class="cta-banner__title" id="ninjaCtaH">Scale Telework Securely</h2>
+      <p class="cta-banner__sub">From 10 to 50,000 remote workers — NinjaConnect scales with you.</p>
+      <div class="cta-banner__ctas">
+        <a href="mailto:sales@cachatto.com" class="btn-primary">Request Demo</a>
+        <a href="#" class="btn-outline" data-back="home">Back to Home</a>
+      </div>
+    </div>
+  </section>
+</div><!-- /#page-ninjaconnect -->
+
+
+<!-- ============================================================
+  PRODUCT PAGE: NinjaConnect ISM
+============================================================ -->
+<div id="page-ninjaism" class="page" aria-label="NinjaConnect ISM product page">
+  <button class="back-btn" data-back="home">← Back to Home</button>
+  <section class="product-hero section--dark" aria-labelledby="ismPH">
+    <div>
+      <p class="product-hero__label">Information Security Management</p>
+      <h1 class="product-hero__title" id="ismPH">NinjaConnect ISM</h1>
+      <p class="product-hero__desc">Compliance-ready information security management for regulated industries — ISO, NIST, HIPAA, and beyond.</p>
+      <div class="hero__ctas"><a href="mailto:sales@cachatto.com" class="btn-primary">Request Demo</a><a href="#" class="btn-outline">View Datasheet</a></div>
+    </div>
+  </section>
+  <section class="features section--dark" aria-labelledby="ismFeat">
+    <div class="section__header"><p class="section__eyebrow">Core Features</p><h2 class="section__title" id="ismFeat">Compliance by Design</h2></div>
+    <div class="features__grid container">
+      <article class="feature-card fade-in"><div class="feature-card__icon">📜</div><h3 class="feature-card__title">Regulatory Compliance</h3><p class="feature-card__desc">Pre-built controls for ISO 27001, NIST CSF, HIPAA, PCI-DSS, GDPR, and regional frameworks.</p></article>
+      <article class="feature-card fade-in stagger-1"><div class="feature-card__icon">📊</div><h3 class="feature-card__title">Audit Trail &amp; Reporting</h3><p class="feature-card__desc">Immutable event logs with automated compliance reports ready for auditor submission.</p></article>
+      <article class="feature-card fade-in stagger-2"><div class="feature-card__icon">👤</div><h3 class="feature-card__title">Role-Based Access Control</h3><p class="feature-card__desc">Fine-grained RBAC with dynamic policy evaluation. Access follows the user, not the network.</p></article>
+      <article class="feature-card fade-in"><div class="feature-card__icon">🚨</div><h3 class="feature-card__title">Anomaly Detection</h3><p class="feature-card__desc">ML-powered behavioural baselines with real-time alerts for suspicious access patterns and insider threats.</p></article>
+      <article class="feature-card fade-in stagger-1"><div class="feature-card__icon">🏷️</div><h3 class="feature-card__title">Data Classification</h3><p class="feature-card__desc">Automatic classification of sensitive data across file stores, email, and collaboration tools.</p></article>
+      <article class="feature-card fade-in stagger-2"><div class="feature-card__icon">🔗</div><h3 class="feature-card__title">SIEM Integration</h3><p class="feature-card__desc">Native connectors for Splunk, Microsoft Sentinel, Elastic SIEM, and generic syslog/CEF export.</p></article>
+    </div>
+  </section>
+  <section class="cta-banner" aria-labelledby="ismCtaH">
+    <div class="cta-banner__inner">
+      <h2 class="cta-banner__title" id="ismCtaH">Achieve Compliance with Confidence</h2>
+      <p class="cta-banner__sub">Pass your next audit — first time, every time.</p>
+      <div class="cta-banner__ctas">
+        <a href="mailto:sales@cachatto.com" class="btn-primary">Request Demo</a>
+        <a href="#" class="btn-outline" data-back="home">Back to Home</a>
+      </div>
+    </div>
+  </section>
+</div><!-- /#page-ninjaism -->
+
+
+<!-- ============================================================
+  FOOTER
+============================================================ -->
+<footer class="footer" id="company" role="contentinfo">
+  <div class="footer__top">
+    <div class="footer__brand">
+      <div class="footer__logo">
+        <img src="Assets/logo_c1_h_clr.svg" alt="CACHATTO" class="footer__logo-img" width="130" height="26" style="margin-bottom:var(--s2);" />
+      </div>
+      <p class="footer__tagline">Secure Unified Digital Workspace. Empowering enterprise teams with zero-trust access, data protection, and scalable security since 2004.</p>
+      <div class="footer__social" aria-label="Social media">
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="Twitter/X">𝕏</a>
+        <a href="#" aria-label="YouTube">▶</a>
+        <a href="#" aria-label="GitHub">⌥</a>
+      </div>
+    </div>
+    <div class="footer__col">
+      <p class="footer__col-title">Products</p>
+      <ul>
+        <li><a href="#" data-product="cachatto">CACHATTO</a></li>
+        <li><a href="#" data-product="ninjaconnect">NinjaConnect Telework</a></li>
+        <li><a href="#" data-product="ninjaism">NinjaConnect ISM</a></li>
+        <li><a href="#">Pricing</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <p class="footer__col-title">Company</p>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Partners</a></li>
+        <li><a href="#">Press</a></li>
+      </ul>
+    </div>
+    <div class="footer__col">
+      <p class="footer__col-title">Resources</p>
+      <ul>
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">Case Studies</a></li>
+        <li><a href="#">Security Blog</a></li>
+        <li><a href="#contact">Contact Sales</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p class="footer__copy">© 2024 e-Jan Networks Co., Ltd. All rights reserved.</p>
+    <nav class="footer__legal" aria-label="Legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Cookie Settings</a>
+      <a href="#">Security</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
