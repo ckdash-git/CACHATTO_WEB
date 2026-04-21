@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CACHATTO – Secure Unified Digital Workspace</title>
+  <meta name="description"
+    content="CACHATTO delivers policy-based zero-trust remote access for enterprise. Secure any device, any user, any location — with built-in MFA, SSO, and DLP." />
+  <meta name="keywords" content="secure remote access, zero trust, BYOD, enterprise security, MFA, SSO, DLP" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Material Symbols (Outlined, fixed-axes: size=24, weight=400, fill=0, grad=0) -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════════════ -->
+  <nav class="nav" id="mainNav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+
+      <a href="index.html" class="nav__logo" id="logoHome" aria-label="CACHATTO home">
+        <img src="Assets/logo_c1_h_clr.svg" alt="CACHATTO" width="140" height="28" />
+      </a>
+
+      <div class="nav__links" role="list">
+        <div class="nav__dropdown" role="listitem">
+          <a href="index.html#hero" class="nav__dropdown-toggle">Products <span
+              class="material-symbols-outlined">expand_more</span></a>
+          <div class="nav__dropdown-menu">
+            <a href="cachatto.html">CACHATTO</a>
+            <a href="index.html#hero" class="slide-link" data-slide="1">NinjaConnect Telework</a>
+            <a href="index.html#hero" class="slide-link" data-slide="2">NinjaConnect ISM</a>
+          </div>
+        </div>
+        <a href="index.html#perimeter" role="listitem">Solutions</a>
+        <a href="index.html#features" role="listitem">Features</a>
+        <a href="index.html#articles" role="listitem">Resources</a>
+        <a href="index.html#testimonials" role="listitem">Customers</a>
+      </div>
+
+      <div class="nav__ctas">
+        <a href="#contact" class="nav__contact">Contact</a>
+        <a href="#cta" class="btn btn-primary" id="navDemo">
+          <span class="material-symbols-outlined">play_circle</span>
+          Request Demo
+        </a>
+      </div>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <nav class="nav__mobile" id="mobileNav" aria-label="Mobile navigation">
+    <a href="index.html" id="mNavHome">Home</a>
+    <div class="nav__mobile-dropdown">
+      <button class="nav__mobile-toggle">Products <span class="material-symbols-outlined">expand_more</span></button>
+      <div class="nav__mobile-menu">
+        <a href="cachatto.html">CACHATTO</a>
+        <a href="index.html#hero" class="slide-link" data-slide="1">NinjaConnect Telework</a>
+        <a href="index.html#hero" class="slide-link" data-slide="2">NinjaConnect ISM</a>
+      </div>
+    </div>
+    <a href="index.html#perimeter">Solutions</a>
+    <a href="index.html#features">Features</a>
+    <a href="index.html#articles">Resources</a>
+    <a href="index.html#testimonials">Customers</a>
+    <a href="#contact">Contact</a>
+    <a href="#cta" class="btn btn-primary">Request Demo</a>
+  </nav>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+     PRODUCT HERO SECTION
+════════════════════════════════════════════════════════════ -->
+  <section class="hero-slider-section" id="hero" style="height: auto; min-height: 50vh;">
+    <div class="hero-slider" style="height: 100%;">
+      <div class="hero-track" style="transform: none; display: flex; width: 100%;">
+
+        <!-- Static Slide: CACHATTO -->
+        <div class="hero-slide active" style="width: 100%;">
+          <div class="hero" aria-labelledby="heroHeadline">
+            <div class="hero__grid-bg" aria-hidden="true"></div>
+            <div class="hero__glow" aria-hidden="true"
+              style="background: radial-gradient(ellipse 55% 55% at 65% 50%, rgba(0, 87, 184, 0.2) 0%, transparent 70%);">
+            </div>
+
+            <div class="hero__inner">
+              <div class="hero__content"
+                style="max-width: 800px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <div class="hero__badge" aria-label="Product">
+                  <span class="hero__badge-dot"></span>
+                  ENTERPRISE SECURITY PLATFORM
+                </div>
+
+                <h1 class="hero__headline" id="heroHeadline" style="font-size: clamp(3rem, 6vw, 5rem);">
+                  CACHATTO
+                </h1>
+
+                <p class="hero__subtext" style="font-size: clamp(1.1rem, 2vw, 1.3rem); margin-bottom: var(--s2);">
+                  Unified Secure Access Platform for your Business
+                </p>
+
+                <div class="hero__ctas" style="justify-content: center; margin-top: var(--s4);">
+                  <a href="#cta" class="btn btn-primary">
+                    Contact Us
+                  </a>
+                  <a href="#about" class="btn btn-outline-white">
+                    Learn More
+                    <span class="material-symbols-outlined">arrow_downward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+     ABOUT SECTION
+════════════════════════════════════════════════════════════ -->
+  <section class="section section--light-gray" id="about">
+    <div class="split-layout">
+      <div class="split-text fade-up" style="max-width: 600px;">
+        <div class="eyebrow">
+          <span class="material-symbols-outlined" aria-hidden="true">info</span>
+          About CACHATTO
+        </div>
+        <h2 style="margin-bottom: var(--s3);">Secure Digital Workspace</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--c-text-muted); margin-bottom: var(--s2);">
+          With the proliferation of devices and types of access, securing business applications and data has become a
+          major challenge. Increasing productivity while mitigating cyber threats is a growing concern for today's
+          enterprises.
+        </p>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--c-text-muted);">
+          CACHATTO's flexible architecture meets these challenges in a single cohesive platform. Easy to deploy, manage,
+          and scale, our Zero Trust Model protects business applications, servers, networks, and data at all times.
+        </p>
+      </div>
+      <div class="split-image-wrapper fade-up d1">
+        <img src="Assets/device_cscsw.webp" alt="CACHATTO interface on laptop" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+     CORE FEATURES GRID
+════════════════════════════════════════════════════════════ -->
+  <section class="section features-section" id="features">
+    <div class="section-header">
+      <div class="eyebrow">
+        <span class="material-symbols-outlined" aria-hidden="true">verified</span>
+        Key Capabilities
+      </div>
+      <h2 class="section-title">Why Choose CACHATTO?</h2>
+      <p class="section-desc">
+        Empower your workforce flexibility while enhancing productivity and security.
+      </p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feat-item hover-lift fade-up d1"
+        style="background: #fff; padding: var(--s4); border-radius: var(--r-md); border: 1px solid rgba(0,0,0,0.05);">
+        <div class="feat-item__icon" aria-hidden="true" style="margin-bottom: var(--s2);">
+          <span class="material-symbols-outlined" style="font-size: 32px; color: var(--c-blue);">lock_person</span>
+        </div>
+        <div class="feat-item__content">
+          <div class="feat-item__title" style="font-size: 16px; margin-bottom: 8px;">Multifactor Authentication</div>
+          <p class="feat-item__desc" style="margin: 0; color: var(--c-text-muted);">Essential for modern cybersecurity.
+            Enhances security, protects sensitive data, and builds user trust.</p>
+        </div>
+      </div>
+
+      <div class="feat-item hover-lift fade-up d2"
+        style="background: #fff; padding: var(--s4); border-radius: var(--r-md); border: 1px solid rgba(0,0,0,0.05);">
+        <div class="feat-item__icon" aria-hidden="true" style="margin-bottom: var(--s2);">
+          <span class="material-symbols-outlined" style="font-size: 32px; color: var(--c-blue);">key</span>
+        </div>
+        <div class="feat-item__content">
+          <div class="feat-item__title" style="font-size: 16px; margin-bottom: 8px;">Single Sign-On (SSO)</div>
+          <p class="feat-item__desc" style="margin: 0; color: var(--c-text-muted);">Simplifies user access to multiple
+            applications with one set of credentials, enhancing convenience and security.</p>
+        </div>
+      </div>
+
+      <div class="feat-item hover-lift fade-up d3"
+        style="background: #fff; padding: var(--s4); border-radius: var(--r-md); border: 1px solid rgba(0,0,0,0.05);">
+        <div class="feat-item__icon" aria-hidden="true" style="margin-bottom: var(--s2);">
+          <span class="material-symbols-outlined" style="font-size: 32px; color: var(--c-blue);">shield</span>
+        </div>
+        <div class="feat-item__content">
+          <div class="feat-item__title" style="font-size: 16px; margin-bottom: 8px;">Ensured Security</div>
+          <p class="feat-item__desc" style="margin: 0; color: var(--c-text-muted);">Protecting your digital assets is
+            crucial. Safeguard your data, systems, and networks against evolving threats.</p>
+        </div>
+      </div>
+
+      <div class="feat-item hover-lift fade-up d1"
+        style="background: #fff; padding: var(--s4); border-radius: var(--r-md); border: 1px solid rgba(0,0,0,0.05);">
+        <div class="feat-item__icon" aria-hidden="true" style="margin-bottom: var(--s2);">
+          <span class="material-symbols-outlined" style="font-size: 32px; color: var(--c-blue);">wifi_off</span>
+        </div>
+        <div class="feat-item__content">
+          <div class="feat-item__title" style="font-size: 16px; margin-bottom: 8px;">True Offline</div>
+          <p class="feat-item__desc" style="margin: 0; color: var(--c-text-muted);">Keep your organization productive
+            and secure without internet connectivity. Ensure uninterrupted operations.</p>
+        </div>
+      </div>
+
+      <div class="feat-item hover-lift fade-up d2"
+        style="background: #fff; padding: var(--s4); border-radius: var(--r-md); border: 1px solid rgba(0,0,0,0.05);">
+        <div class="feat-item__icon" aria-hidden="true" style="margin-bottom: var(--s2);">
+          <span class="material-symbols-outlined" style="font-size: 32px; color: var(--c-blue);">rocket_launch</span>
+        </div>
+        <div class="feat-item__content">
+          <div class="feat-item__title" style="font-size: 16px; margin-bottom: 8px;">Easy Deployment</div>
+          <p class="feat-item__desc" style="margin: 0; color: var(--c-text-muted);">Quickly implement new solutions with
+            minimal disruption. Streamlined process ensuring seamless transition.</p>
+        </div>
+      </div>
+
+      <div class="feat-item hover-lift fade-up d3"
+        style="background: #fff; padding: var(--s4); border-radius: var(--r-md); border: 1px solid rgba(0,0,0,0.05);">
+        <div class="feat-item__icon" aria-hidden="true" style="margin-bottom: var(--s2);">
+          <span class="material-symbols-outlined" style="font-size: 32px; color: var(--c-blue);">cloud_sync</span>
+        </div>
+        <div class="feat-item__content">
+          <div class="feat-item__title" style="font-size: 16px; margin-bottom: 8px;">Cloud-On Premises</div>
+          <p class="feat-item__desc" style="margin: 0; color: var(--c-text-muted);">Combines cloud scalability with
+            on-premises control, offering a balance of innovation, agility, and security.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+     SOLUTIONS DEEP DIVE
+════════════════════════════════════════════════════════════ -->
+  <section class="section section--dark perimeter-section" id="solutions">
+    <div class="split-layout split-layout--reverse">
+      <div class="split-text fade-up">
+        <div class="eyebrow eyebrow--light">
+          <span class="material-symbols-outlined" aria-hidden="true">travel_explore</span>
+          Zero Trust Approach
+        </div>
+        <h2 style="color: #fff; margin-bottom: var(--s3);">Securing a Perimeter-less Environment</h2>
+        <p style="color: rgba(255,255,255,0.7);">
+          Securing a perimeter-less environment requires a proactive and adaptive cybersecurity approach. Prioritizing
+          data and identity protection helps organisations effectively mitigate risks and safeguard digital assets in
+          today’s dynamic threat landscape.
+        </p>
+
+        <div class="perimeter-points" style="margin-top: var(--s4);">
+          <div class="p-point hover-lift fade-up">
+            <div class="p-point__icon" aria-hidden="true"><span class="material-symbols-outlined">devices</span></div>
+            <div>
+              <div class="p-point__title" style="color: #fff;">Secure Access from Unmanaged Devices</div>
+              <p class="p-point__desc" style="color: rgba(255,255,255,0.6);">Crucial for modern organizations. Protect
+                networks while enabling remote workforces to operate efficiently from any location.</p>
+            </div>
+          </div>
+          <div class="p-point hover-lift fade-up d1">
+            <div class="p-point__icon" aria-hidden="true"><span
+                class="material-symbols-outlined">data_loss_prevention</span></div>
+            <div>
+              <div class="p-point__title" style="color: #fff;">Secure Data on Unmanaged Devices</div>
+              <p class="p-point__desc" style="color: rgba(255,255,255,0.6);">Critical for protecting sensitive
+                information. Mitigate risks and ensure data remains protected, regardless of the device.</p>
+            </div>
+          </div>
+          <div class="p-point hover-lift fade-up d2">
+            <div class="p-point__icon" aria-hidden="true"><span class="material-symbols-outlined">support_agent</span>
+            </div>
+            <div>
+              <div class="p-point__title" style="color: #fff;">Strong Technical Support</div>
+              <p class="p-point__desc" style="color: rgba(255,255,255,0.6);">With our team of experts by your side, rest
+                assured your technology needs are in good hands.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="split-image-wrapper fade-up d1">
+        <img src="Assets/concept_cachatto_2.png" alt="CACHATTO concept illustration" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+     DEVICE COMPATIBILITY
+════════════════════════════════════════════════════════════ -->
+  <section class="section section--light-gray" id="compatibility">
+    <div class="split-layout">
+      <div class="split-text fade-up">
+        <div class="eyebrow">
+          <span class="material-symbols-outlined" aria-hidden="true">important_devices</span>
+          Any Device, Anywhere
+        </div>
+        <h2 style="margin-bottom: var(--s3);">Cross-Platform Compatibility</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--c-text-muted); margin-bottom: var(--s4);">
+          CACHATTO provides a seamless and secure digital workspace experience across all your devices. Whether your
+          workforce relies on personal smartphones, company-issued tablets, or home PCs, access is strictly controlled
+          and data remains perfectly secure.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--s3);">
+          <div class="hover-lift"
+            style="background: #fff; padding: var(--s3); border-radius: var(--r-md); border: 1px solid rgba(0,0,0,0.05);">
+            <div style="color: var(--c-blue); margin-bottom: 8px;"><span class="material-symbols-outlined"
+                style="font-size: 28px;">phone_iphone</span></div>
+            <h4 style="margin: 0 0 4px 0; font-size: 15px;">iOS &amp; Android</h4>
+            <p style="margin: 0; font-size: 13px; color: var(--c-text-muted);">Secure sandbox apps for mobile.</p>
+          </div>
+          <div class="hover-lift"
+            style="background: #fff; padding: var(--s3); border-radius: var(--r-md); border: 1px solid rgba(0,0,0,0.05);">
+            <div style="color: var(--c-blue); margin-bottom: 8px;"><span class="material-symbols-outlined"
+                style="font-size: 28px;">laptop_mac</span></div>
+            <h4 style="margin: 0 0 4px 0; font-size: 15px;">Windows &amp; Mac</h4>
+            <p style="margin: 0; font-size: 13px; color: var(--c-text-muted);">Secure browser and remote desktop.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="split-image-wrapper fade-up d1">
+        <img src="Assets/device_cscad.webp" alt="CACHATTO on mobile devices" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+     BENEFITS HIGHLIGHT
+════════════════════════════════════════════════════════════ -->
+  <section class="section policy-section" id="benefits">
+    <div class="split-layout">
+      <div class="split-image-wrapper fade-up">
+        <img src="Assets/device_crd.webp" alt="CACHATTO Remote Desktop interface" loading="lazy" />
+      </div>
+
+      <div class="split-text fade-up d1">
+        <div class="eyebrow">
+          <span class="material-symbols-outlined" aria-hidden="true">star</span>
+          CACHATTO Benefits
+        </div>
+        <h2 style="margin-bottom: var(--s2);">Secure Unified Digital Work-space</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--c-text-muted); margin-bottom: var(--s4);">
+          Proactively manages security risks while providing flexible access.
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: var(--s3);">
+          <article class="hover-lift"
+            style="display: flex; gap: var(--s2); padding: var(--s3); background: #fff; border-radius: var(--r-md); border: 1px solid rgba(0,0,0,0.05);">
+            <div style="color: var(--c-blue);"><span class="material-symbols-outlined"
+                style="font-size: 32px;">data_alert</span></div>
+            <div>
+              <h3 style="margin: 0 0 4px 0; font-size: 16px;">Built-in DLP</h3>
+              <p style="margin: 0; font-size: 14px; color: var(--c-text-muted); line-height: 1.5;">Client and end-point
+                data leak prevention ensures sensitive corporate data never leaks to unauthorized devices.</p>
+            </div>
+          </article>
+
+          <article class="hover-lift"
+            style="display: flex; gap: var(--s2); padding: var(--s3); background: #fff; border-radius: var(--r-md); border: 1px solid rgba(0,0,0,0.05);">
+            <div style="color: var(--c-blue);"><span class="material-symbols-outlined"
+                style="font-size: 32px;">login</span></div>
+            <div>
+              <h3 style="margin: 0 0 4px 0; font-size: 16px;">SSO Support</h3>
+              <p style="margin: 0; font-size: 14px; color: var(--c-text-muted); line-height: 1.5;">Single Sign-On (SSO)
+                support enables seamless user experience across multiple enterprise applications with one login.</p>
+            </div>
+          </article>
+
+          <article class="hover-lift"
+            style="display: flex; gap: var(--s2); padding: var(--s3); background: #fff; border-radius: var(--r-md); border: 1px solid rgba(0,0,0,0.05);">
+            <div style="color: var(--c-blue);"><span class="material-symbols-outlined"
+                style="font-size: 32px;">cloud</span></div>
+            <div>
+              <h3 style="margin: 0 0 4px 0; font-size: 16px;">Unified Control</h3>
+              <p style="margin: 0; font-size: 14px; color: var(--c-text-muted); line-height: 1.5;">Single point to
+                control cloud on-premise infrastructure, simplifying administration and compliance monitoring.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+     FAQ
+════════════════════════════════════════════════════════════ -->
+  <section class="section section--dark faq-section" id="faq" aria-labelledby="faqTitle">
+    <div class="section-header">
+      <div class="eyebrow eyebrow--light">
+        <span class="material-symbols-outlined" aria-hidden="true">help_outline</span>
+        Support
+      </div>
+      <h2 class="section-title section-title--white" id="faqTitle">Frequently Asked Questions</h2>
+      <p class="section-desc section-desc--white">Learn more about our services and how we can assist you.</p>
+    </div>
+
+    <div class="faq-inner" style="color: var(--c-text);">
+
+      <div class="faq-item" id="faq1">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq1a" id="faq1btn">
+          In which services do you specialize in?
+          <span class="material-symbols-outlined" aria-hidden="true">add</span>
+        </button>
+        <div class="faq-a" id="faq1a" role="region" aria-labelledby="faq1btn">
+          <ul style="padding-left: var(--s4); list-style-type: disc;">
+            <li>Secure Remote Access to business apps and networks.</li>
+            <li>Zero Trust Security for strict identity and endpoint protection.</li>
+            <li>Multi-Factor Authentication (MFA) for enhanced login security.</li>
+            <li>Single Sign-On (SSO) for easy access across platforms.</li>
+            <li>Endpoint Control to safeguard data on user devices.</li>
+            <li>BYOD and SaaS Security for protecting personal devices.</li>
+            <li>IT-OT Security with network segmentation and built-in DLP.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq2">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq2a" id="faq2btn">
+          How do I get started with your services?
+          <span class="material-symbols-outlined" aria-hidden="true">add</span>
+        </button>
+        <div class="faq-a" id="faq2a" role="region" aria-labelledby="faq2btn">
+          We specialize in serving a list of industries, e.g., healthcare, IT-OT industries, etc. Contact us to begin
+          integrating CACHATTO into your infrastructure.
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq3">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq3a" id="faq3btn">
+          What sets your services apart from competitors?
+          <span class="material-symbols-outlined" aria-hidden="true">add</span>
+        </button>
+        <div class="faq-a" id="faq3a" role="region" aria-labelledby="faq3btn">
+          Our services stand out due to key differentiators: no ports need to be opened, a personalized approach, deep
+          industry expertise, and highly secure proprietary technology.
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq4">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq4a" id="faq4btn">
+          Do you offer technical support for your services?
+          <span class="material-symbols-outlined" aria-hidden="true">add</span>
+        </button>
+        <div class="faq-a" id="faq4a" role="region" aria-labelledby="faq4btn">
+          Yes, we provide technical support to ensure smooth operation and resolution of any issues you may encounter.
+          Our technical support team is available Monday – Friday during business hours 9:30 AM to 6:30 PM.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+     FINAL CTA BANNER
+════════════════════════════════════════════════════════════ -->
+  <section class="cta-banner" id="cta" aria-labelledby="ctaTitle">
+    <div class="cta-banner__inner">
+      <div class="cta-banner__eyebrow">
+        <span class="material-symbols-outlined" aria-hidden="true">support_agent</span>
+        Let's Talk
+      </div>
+      <h2 id="ctaTitle">Need Help?</h2>
+      <p>Do you want to reach out for more information or to see how we can help you? Feel free to reach out to us.</p>
+      <div class="cta-banner__ctas">
+        <a href="#contact" class="btn btn-white" id="ctaContact">
+          <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════════════════════════ -->
+  <section class="section section--dark testimonials-section" id="testimonials" aria-labelledby="testiTitle">
+    <div class="testi-wrapper">
+      <div class="section-header">
+        <div class="eyebrow eyebrow--light">
+          <span class="material-symbols-outlined" aria-hidden="true">format_quote</span>
+          Customer Stories
+        </div>
+        <h2 class="section-title section-title--white" id="testiTitle">What Our Customers Say</h2>
+        <p class="section-desc section-desc--white">Trusted by enterprises across Japan and globally — from
+          manufacturing to IT and construction.</p>
+      </div>
+
+      <div class="testi-track-outer" aria-live="polite" aria-label="Customer testimonials carousel">
+        <div class="testi-track" id="testiTrack" role="list">
+
+          <div class="testi-card is-active" role="listitem" aria-label="Testimonial from Panasonic">
+            <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testi-quote">
+              "CACHATTO has transformed how we enable secure remote work across our global teams. The policy-based
+              access control gives us granular visibility without adding friction for employees."
+            </p>
+            <div class="testi-footer">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#0057B8,#0099E6);" aria-hidden="true">P
+              </div>
+              <div>
+                <div class="testi-name">Hiroshi Tanaka</div>
+                <div class="testi-company">Panasonic Corporation</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card" role="listitem" aria-label="Testimonial from INTEC">
+            <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testi-quote">
+              "Deploying CACHATTO to 8,000+ users across multiple branches was seamless. The SSO integration with our
+              existing identity provider saved months of development work."
+            </p>
+            <div class="testi-footer">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#0097A7,#0057B8);" aria-hidden="true">I
+              </div>
+              <div>
+                <div class="testi-name">Keiko Yamamoto</div>
+                <div class="testi-company">INTEC Inc.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card" role="listitem" aria-label="Testimonial from Takenaka">
+            <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testi-quote">
+              "The built-in DLP is exactly what we needed for our construction site BYOD deployment. Sensitive project
+              data stays secure even when accessed from personal devices on-site."
+            </p>
+            <div class="testi-footer">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#5C35B8,#0057B8);" aria-hidden="true">T
+              </div>
+              <div>
+                <div class="testi-name">Satoshi Mizuno</div>
+                <div class="testi-company">Takenaka Corporation</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card" role="listitem" aria-label="Testimonial from Fujitsu">
+            <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testi-quote">
+              "Since switching to CACHATTO's zero-trust model, our IT team's support tickets for remote access issues
+              dropped by 60%. The adaptive policies just work — without exceptions."
+            </p>
+            <div class="testi-footer">
+              <div class="testi-avatar" style="background:linear-gradient(135deg,#D84040,#0057B8);" aria-hidden="true">F
+              </div>
+              <div>
+                <div class="testi-name">Ryota Ishida</div>
+                <div class="testi-company">Fujitsu Limited</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="testi-controls" role="group" aria-label="Testimonial navigation">
+        <button class="testi-btn" id="testiPrev" aria-label="Previous testimonial">
+          <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
+        </button>
+        <div class="testi-dots" id="testiDots" role="group" aria-label="Testimonial indicators">
+          <button class="testi-dot active" aria-label="Go to testimonial 1" aria-current="true"></button>
+          <button class="testi-dot" aria-label="Go to testimonial 2"></button>
+          <button class="testi-dot" aria-label="Go to testimonial 3"></button>
+          <button class="testi-dot" aria-label="Go to testimonial 4"></button>
+        </div>
+        <button class="testi-btn" id="testiNext" aria-label="Next testimonial">
+          <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+     FAQ
+════════════════════════════════════════════════════════════ -->
+  <section class="section faq-section" id="faq" aria-labelledby="faqTitle">
+    <div class="section-header">
+      <div class="eyebrow">
+        <span class="material-symbols-outlined" aria-hidden="true">help_outline</span>
+        Support
+      </div>
+      <h2 class="section-title" id="faqTitle">Frequently Asked Questions</h2>
+      <p class="section-desc">Everything you need to know before getting started with CACHATTO.</p>
+    </div>
+
+    <div class="faq-inner">
+
+      <div class="faq-item" id="faq1">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq1a" id="faq1btn">
+          What services does CACHATTO offer?
+          <span class="material-symbols-outlined" aria-hidden="true">add</span>
+        </button>
+        <div class="faq-a" id="faq1a" role="region" aria-labelledby="faq1btn">
+          CACHATTO provides a comprehensive suite of enterprise security services including secure remote access,
+          zero-trust network access (ZTNA), multi-factor authentication, single sign-on, data leak prevention, and IT-OT
+          security solutions.
+          <div class="faq-tags">
+            <span class="faq-tag"><span class="material-symbols-outlined">vpn_key</span>Remote Access</span>
+            <span class="faq-tag"><span class="material-symbols-outlined">verified_user</span>Zero Trust</span>
+            <span class="faq-tag"><span class="material-symbols-outlined">lock_person</span>MFA</span>
+            <span class="faq-tag"><span class="material-symbols-outlined">key</span>SSO</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq2">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq2a" id="faq2btn">
+          How do I get started with CACHATTO?
+          <span class="material-symbols-outlined" aria-hidden="true">add</span>
+        </button>
+        <div class="faq-a" id="faq2a" role="region" aria-labelledby="faq2btn">
+          Getting started is simple. Request a demo and our enterprise solutions team will assess your environment,
+          define access policies, and guide you through a pilot deployment — typically live within 2–4 weeks with
+          dedicated onboarding support.
+          <div class="faq-tags">
+            <span class="faq-tag"><span class="material-symbols-outlined">calendar_today</span>2–4 weeks to go
+              live</span>
+            <span class="faq-tag"><span class="material-symbols-outlined">support_agent</span>Dedicated support</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq3">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq3a" id="faq3btn">
+          What makes CACHATTO different from traditional VPNs?
+          <span class="material-symbols-outlined" aria-hidden="true">add</span>
+        </button>
+        <div class="faq-a" id="faq3a" role="region" aria-labelledby="faq3btn">
+          Unlike traditional VPNs that grant broad network access, CACHATTO uses a zero-trust model — granting access to
+          specific applications per user, per device, per context. No data touches endpoints, DLP is built-in, and
+          policies adapt in real time.
+          <div class="faq-tags">
+            <span class="faq-tag"><span class="material-symbols-outlined">verified_user</span>Zero Trust</span>
+            <span class="faq-tag"><span class="material-symbols-outlined">data_loss_prevention</span>Built-in DLP</span>
+            <span class="faq-tag"><span class="material-symbols-outlined">policy</span>Policy Adaptive</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq4">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq4a" id="faq4btn">
+          Does CACHATTO support MFA and SSO?
+          <span class="material-symbols-outlined" aria-hidden="true">add</span>
+        </button>
+        <div class="faq-a" id="faq4a" role="region" aria-labelledby="faq4btn">
+          Yes. CACHATTO natively supports FIDO2/WebAuthn, TOTP, hardware tokens, and biometrics for MFA. For SSO, it
+          integrates with SAML 2.0 and OIDC — connecting to your existing identity provider (Microsoft Entra, Okta, G
+          Suite, etc.) in minutes.
+          <div class="faq-tags">
+            <span class="faq-tag"><span class="material-symbols-outlined">fingerprint</span>FIDO2 / WebAuthn</span>
+            <span class="faq-tag"><span class="material-symbols-outlined">key</span>SAML 2.0 / OIDC</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq5">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq5a" id="faq5btn">
+          What compliance certifications does CACHATTO hold?
+          <span class="material-symbols-outlined" aria-hidden="true">add</span>
+        </button>
+        <div class="faq-a" id="faq5a" role="region" aria-labelledby="faq5btn">
+          CACHATTO maintains ISO 27001, SOC 2 Type II, GDPR compliance, and FIDO2/WebAuthn certification. Our
+          infrastructure undergoes annual third-party security audits and continuous penetration testing.
+          <div class="faq-tags">
+            <span class="faq-tag"><span class="material-symbols-outlined">verified_user</span>ISO 27001</span>
+            <span class="faq-tag"><span class="material-symbols-outlined">security</span>SOC 2 Type II</span>
+            <span class="faq-tag"><span class="material-symbols-outlined">privacy_tip</span>GDPR</span>
+            <span class="faq-tag"><span class="material-symbols-outlined">fingerprint</span>FIDO2</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq6">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq6a" id="faq6btn">
+          Do you provide enterprise support?
+          <span class="material-symbols-outlined" aria-hidden="true">add</span>
+        </button>
+        <div class="faq-a" id="faq6a" role="region" aria-labelledby="faq6btn">
+          Yes. All enterprise plans include 24/7 dedicated support with Japanese and English-speaking engineers,
+          SLA-backed response times, and a dedicated customer success manager. On-site professional services are also
+          available.
+          <div class="faq-tags">
+            <span class="faq-tag"><span class="material-symbols-outlined">support_agent</span>24/7 Support</span>
+            <span class="faq-tag"><span class="material-symbols-outlined">groups</span>Dedicated CSM</span>
+            <span class="faq-tag"><span class="material-symbols-outlined">handshake</span>Professional Services</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+     FINAL CTA BANNER
+════════════════════════════════════════════════════════════ -->
+  <section class="cta-banner" id="cta" aria-labelledby="ctaTitle">
+    <div class="cta-banner__inner">
+      <div class="cta-banner__eyebrow">
+        <span class="material-symbols-outlined" aria-hidden="true">support_agent</span>
+        Let's Talk
+      </div>
+      <h2 id="ctaTitle">Need Help?</h2>
+      <p>Our enterprise security specialists are ready to help you design the right access architecture for your
+        organisation.</p>
+      <div class="cta-banner__ctas">
+        <a href="#contact" class="btn btn-white" id="ctaContact">
+          <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+          Talk to an Expert
+        </a>
+        <a href="#cta" class="btn btn-outline-white" id="ctaDemo">
+          <span class="material-symbols-outlined" aria-hidden="true">play_circle</span>
+          Request Demo
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+  <footer class="footer" id="contact" role="contentinfo">
+    <div class="footer__top">
+
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="Assets/logo_c1_h_clr.svg" alt="CACHATTO" width="130" height="26" />
+        </div>
+        <p class="footer__tagline">
+          Secure Unified Digital Workspace. Empowering enterprise teams with zero-trust access, data protection, and
+          scalable security since 2004.
+        </p>
+        <div class="footer__social" aria-label="Social media links">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__col-title">Products</div>
+        <ul>
+          <li><a href="#">CACHATTO</a></li>
+          <li><a href="#">NinjaConnect Telework</a></li>
+          <li><a href="#">NinjaConnect ISM</a></li>
+          <li><a href="#">Secure File Connect</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__col-title">Solutions</div>
+        <ul>
+          <li><a href="#">Remote Work Security</a></li>
+          <li><a href="#">BYOD &amp; Unmanaged Devices</a></li>
+          <li><a href="#">Zero Trust Access</a></li>
+          <li><a href="#">IT-OT Security</a></li>
+          <li><a href="#">Compliance</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__col-title">Company</div>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Customers</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <span class="footer__copy">
+        &copy; 2025 e-Gate International Inc. All rights reserved.
+      </span>
+      <nav class="footer__legal" aria-label="Legal links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Cookie Settings</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
