@@ -1,0 +1,19 @@
+# ── OS files ──────────────────────────────────────
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ── Editor / IDE ──────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Node (for build script) ──────────────────────
+node_modules/
+package-lock.json
+
+# ── Logs ──────────────────────────────────────────
+*.log
+npm-debug.log*
