@@ -1,0 +1,73 @@
+/* ══════════════════════════════════════════════
+       6. IDEAL CUSTOMERS — full dark, 2×3 grid
+    ══════════════════════════════════════════════ */
+
+/* Override the section--dark background with true black */
+#customers.section--dark {
+  background: #0a0d14;
+}
+
+.customers-header {
+  text-align: center;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.customers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .customers-grid {
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 600px) {
+    .customers-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+.customer-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: var(--r-xl);
+  padding: 32px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  transition: border-color 0.25s, background 0.25s;
+}
+
+.customer-card:hover {
+  border-color: rgba(0, 153, 230, 0.45);
+  background: rgba(0, 153, 230, 0.07);
+}
+
+.customer-card__icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: var(--r-md);
+  background: rgba(0, 153, 230, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.customer-card__icon .material-symbols-outlined {
+  font-size: 20px;
+  color: var(--c-blue-light);
+}
+
+.customer-card p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.6;
+  margin: 0;
+}
