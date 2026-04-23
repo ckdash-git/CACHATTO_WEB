@@ -2,22 +2,28 @@
 .hero-slider-section {
   position: relative;
   background: var(--c-navy);
-  overflow: hidden;
+  overflow: hidden;         /* clips the horizontal track so no adjacent slide is visible */
+  height: 90vh;             /* ← main fix: lock the section to 90% of the viewport height */
+  min-height: 560px;        /* prevent it from becoming too short on very small screens */
 }
 
 .hero-slider {
   position: relative;
   width: 100%;
+  height: 100%;             /* fill the section's 90vh */
 }
 
 .hero-track {
   display: flex;
-  will-change: transform;
+  height: 100%;             /* fill .hero-slider so the track never overflows vertically */
+  will-change: transform;   /* promotes track to its own GPU layer for jank-free prev/next */
 }
 
 .hero-slide {
-  flex: 0 0 100%;
+  flex: 0 0 100%;           /* each slide takes exactly 100% of the track width */
   width: 100%;
+  height: 100%;             /* each slide fills the track height, removing black bottom gaps */
+  overflow: hidden;         /* safety net: clip any inner content that is taller than 90vh */
 }
 
 .hero-controls {
@@ -75,12 +81,14 @@
 /* ── 8.1 HERO INNER ───────────────────────────────────────── */
 .hero {
   background: var(--g-hero);
-  min-height: 82vh;
+  height: 100%;             /* fill the slide's 90vh instead of using a fixed min-height */
+  min-height: 0;            /* reset the old 82vh min-height that caused extra space */
   display: flex;
   align-items: center;
-  padding: 90px var(--s3) 90px;
+  padding: clamp(64px, 8vh, 90px) var(--s3);
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .hero--telework {
@@ -454,4 +462,74 @@
   font-weight: 600;
   color: #22C55E;
   flex-shrink: 0;
+}
+
+/* ── RESPONSIVE: TABLET (≤ 1024px) ──────────────────────────── */
+@media (max-width: 1024px) {
+  .hero__inner {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--s5);
+  }
+
+  .hero__headline {
+    font-size: clamp(28px, 4vw, 40px);
+  }
+}
+
+/* ── RESPONSIVE: MOBILE (≤ 768px) ───────────────────────────── */
+@media (max-width: 768px) {
+  /* 1. Collapse to single column so content fills the width */
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  /* 2. Hide the dashboard/visual panel — no empty space left behind */
+  .hero__visual {
+    display: none;
+  }
+
+  /* 3. Text content expands to full width */
+  .hero__content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* 4. Center-align inline/flex children */
+  .hero__badge,
+  .hero__ctas,
+  .hero__stats {
+    justify-content: center;
+  }
+
+  /* 5. Reduce font size so headline fits one or two clean lines */
+  .hero__headline {
+    font-size: clamp(26px, 7vw, 36px);
+  }
+
+  .hero__subtext {
+    font-size: 15px;
+  }
+
+  /* 6. Tighten stats row on small screens */
+  .hero__stats {
+    gap: var(--s4);
+    flex-wrap: wrap;
+  }
+}
+
+/* ── RESPONSIVE: SMALL MOBILE (≤ 480px) ─────────────────────── */
+@media (max-width: 480px) {
+  .hero__ctas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero__ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero__stat-val {
+    font-size: 20px;
+  }
 }

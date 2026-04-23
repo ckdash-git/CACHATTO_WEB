@@ -1,5 +1,15 @@
 import { $, $$ } from './utils.js';
 
+// ─── SPEED CONTROLS ────────────────────────────────────────────
+// To slow down reading time:  increase AUTOPLAY_DELAY  (e.g. 8000)
+// To speed up reading time:   decrease AUTOPLAY_DELAY  (e.g. 4000)
+// To slower slide animation:  increase TRANSITION_SPEED (e.g. 900)
+// To snappier slide animation: decrease TRANSITION_SPEED (e.g. 500)
+const AUTOPLAY_DELAY    = 7000; // ms between automatic slide changes
+const TRANSITION_SPEED  = 700;  // ms for the slide-move animation
+const TRANSITION_EASING = 'ease-in-out'; // CSS easing for the slide animation
+// ────────────────────────────────────────────────────────────────
+
 export function initHeroSlider() {
   const heroTrack = $('#heroTrack');
   const heroPrev = $('#heroSliderPrev');
@@ -47,7 +57,8 @@ export function initHeroSlider() {
       heroCurrent = index;
       
       if (useTransition) {
-        heroTrack.style.transition = 'transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)';
+        // Use named constants so speed is easy to tune at the top of this file
+        heroTrack.style.transition = `transform ${TRANSITION_SPEED}ms ${TRANSITION_EASING}`;
         isTransitioning = true;
       } else {
         heroTrack.style.transition = 'none';
@@ -59,6 +70,7 @@ export function initHeroSlider() {
 
     // Handle end of transition to instantly jump to real slides
     heroTrack.addEventListener('transitionend', () => {
+
       isTransitioning = false;
       if (heroCurrent === 0) {
         goToHeroSlide(heroTotal, false);
@@ -89,8 +101,7 @@ export function initHeroSlider() {
     });
 
     function startHeroAuto() {
-      // 6.5s delay to allow users to comfortably read the slide
-      heroTimer = setInterval(heroNextSlide, 6500);
+      heroTimer = setInterval(heroNextSlide, AUTOPLAY_DELAY);
     }
     function resetHeroAuto() {
       clearInterval(heroTimer);
