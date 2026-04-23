@@ -31,6 +31,8 @@
 @import "sections/partnerships.css";
 @import "sections/trusted-clients.css";
 @import "sections/brochure.css";
+@import "sections/three-metrics.css";
+@import "sections/ideal-customer.css";
 
 /* ── Responsive (must be last) ──────────────────────────────── */
 @import "base/responsive.css";

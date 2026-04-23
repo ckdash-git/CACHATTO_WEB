@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CACHATTO One – Hybrid Work Platform</title>
+  <meta name="description"
+    content="CACHATTO One is a hybrid work platform integrating multiple tools, secure communication, and cloud/on-premise systems with centralized management." />
+  <meta name="keywords"
+    content="CACHATTO One, hybrid work platform, remote desktop, secure browser, VPN, centralized management" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Material Symbols -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════════════════════════
+     NAVIGATION
+════════════════════════════════════════════════════════════ -->
+  <nav class="nav" id="mainNav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+
+      <a href="index.html" class="nav__logo" id="logoHome" aria-label="CACHATTO home">
+        <img src="assets/images/logos/logo_c1_h_clr.svg" alt="CACHATTO" width="140" height="28" />
+      </a>
+
+      <div class="nav__links" role="list">
+        <div class="nav__dropdown" role="listitem">
+          <a href="index.html#hero" class="nav__dropdown-toggle">Products <span
+              class="material-symbols-outlined">expand_more</span></a>
+          <div class="nav__dropdown-menu">
+            <a href="cachatto.html">CACHATTO</a>
+            <a href="cachatto-one.html">CACHATTO One</a>
+            <a href="index.html#hero" class="slide-link" data-slide="1">NinjaConnect Telework</a>
+            <a href="index.html#hero" class="slide-link" data-slide="2">NinjaConnect ISM</a>
+          </div>
+        </div>
+        <a href="index.html#perimeter" role="listitem">Solutions</a>
+        <a href="index.html#features" role="listitem">Features</a>
+        <a href="index.html#articles" role="listitem">Resources</a>
+        <a href="index.html#testimonials" role="listitem">Customers</a>
+      </div>
+
+      <div class="nav__ctas">
+        <a href="#contact" class="nav__contact">Contact</a>
+        <a href="brochure_cachatto_one.html" class="btn btn-primary" id="navDemo">
+          <span class="material-symbols-outlined">play_circle</span>
+          Request Demo
+        </a>
+      </div>
+
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <nav class="nav__mobile" id="mobileNav" aria-label="Mobile navigation">
+    <a href="index.html" id="mNavHome">Home</a>
+    <div class="nav__mobile-dropdown">
+      <button class="nav__mobile-toggle">Products <span class="material-symbols-outlined">expand_more</span></button>
+      <div class="nav__mobile-menu">
+        <a href="cachatto.html">CACHATTO</a>
+        <a href="cachatto-one.html">CACHATTO One</a>
+        <a href="index.html#hero" class="slide-link" data-slide="1">NinjaConnect Telework</a>
+        <a href="index.html#hero" class="slide-link" data-slide="2">NinjaConnect ISM</a>
+      </div>
+    </div>
+    <a href="index.html#perimeter">Solutions</a>
+    <a href="index.html#features">Features</a>
+    <a href="index.html#articles">Resources</a>
+    <a href="index.html#testimonials">Customers</a>
+    <a href="#contact">Contact</a>
+    <a href="brochure_cachatto_one.html" class="btn btn-primary">Request Demo</a>
+  </nav>
+
+  <!-- ════════════════════════════════════════════════════════════
+     HERO SECTION
+════════════════════════════════════════════════════════════ -->
+  <section class="hero-slider-section" id="hero" style="height: auto; min-height: 50vh;">
+    <div class="hero-slider" style="height: 100%;">
+      <div class="hero-track" style="transform: none; display: flex; width: 100%;">
+        <div class="hero-slide active" style="width: 100%;">
+          <div class="hero" aria-labelledby="heroHeadline">
+            <div class="hero__grid-bg" aria-hidden="true"></div>
+            <div class="hero__glow" aria-hidden="true"
+              style="background: radial-gradient(ellipse 55% 55% at 65% 50%, rgba(0, 87, 184, 0.2) 0%, transparent 70%);">
+            </div>
+
+            <div class="hero__inner">
+              <div class="hero__content"
+                style="max-width: 800px; margin: 10% auto; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <div class="hero__badge" aria-label="Product">
+                  <span class="hero__badge-dot"></span>
+                  HYBRID WORK PLATFORM
+                </div>
+
+                <h1 class="hero__headline" id="heroHeadline" style="font-size: clamp(2rem, 5vw, 4rem);">
+                  CACHATTO One
+                </h1>
+
+                <p class="hero__subtext" style="font-size: clamp(1.1rem, 2vw, 1.3rem); margin-bottom: var(--s2);">
+                  CACHATTO One is a hybrid work platform that securely unifies PC access, communication, and cloud/on-premise
+                  systems—enabling safe, flexible work from anywhere.
+                </p>
+
+                <div
+                  style="display: flex; gap: var(--s2); flex-wrap: wrap; justify-content: center; margin-bottom: var(--s3);">
+                  <span
+                    style="background: rgba(255,255,255,0.1); padding: 6px 12px; border-radius: 20px; font-size: 14px; border: 1px solid rgba(255,255,255,0.2); color: white;">✓
+                    Multiple tools</span>
+                  <span
+                    style="background: rgba(255,255,255,0.1); padding: 6px 12px; border-radius: 20px; font-size: 14px; border: 1px solid rgba(255,255,255,0.2); color: white;">✓
+                    Centralized management</span>
+                </div>
+
+                <div class="hero__ctas" style="justify-content: center; margin-top: var(--s3);">
+                  <a href="#cta" class="btn btn-primary">
+                    Free Trial
+                  </a>
+                  <a href="brochure_cachatto_one.html" class="btn btn-outline-white">
+                    <span class="material-symbols-outlined">download</span>
+                    Download Brochure
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+     PRODUCT LINEUP SECTION
+════════════════════════════════════════════════════════════ -->
+  <section class="section product-lineup-section section--light-gray" id="product-lineup">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 var(--s4);">
+      <div class="section-header text-center" style="margin-bottom: var(--s5);">
+        <h2 class="section-title"
+          style="color: var(--c-text); font-size: 28px; font-weight: 700; margin-bottom: var(--s2);">CACHATTO One
+          product features</h2>
+        <div style="width: 40px; height: 2px; background: var(--c-blue); margin: 0 auto var(--s3);"></div>
+        <h3 style="font-size: 20px; font-weight: 600; color: var(--c-text); margin-bottom: var(--s3);">Providing
+          business tools for multiple PCs</h3>
+        <p class="section-desc"
+          style="font-size: 15px; color: var(--c-text-muted); max-width: 900px; margin: 0 auto; line-height: 1.6; text-align: left;">
+          The PC business tool offers a data-less client, a secure browser, two remote desktops, and a VPN using
+          CACHATTO One's proprietary communication technology. CACHATTO One alone allows you to select the tools you use
+          according to various needs, job types, and work content, and can accommodate a variety of work styles. No new
+          equipment input is required when introducing additional tools of different types.
+        </p>
+      </div>
+
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: var(--s4); margin-bottom: var(--s5);">
+        <!-- Card 1 -->
+        <article class="hover-lift fade-up"
+          style="background: #fff; padding: var(--s4); border-radius: var(--r-md); border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div style="margin-bottom: var(--s3);">
+            <h3 style="font-size: 20px; font-weight: 600; color: var(--c-text); margin-bottom: 4px;">Access in-house
+              with a secure VPN</h3>
+            <div style="font-size: 18px; font-weight: 600; color: #5c5ca8;">Dataless Client</div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: var(--s3); margin-bottom: var(--s3); flex-grow: 1;">
+            <div style="flex: 1 1 200px; display: flex; flex-direction: column; justify-content: center;">
+              <img src="Assets/images/logo_cscad_h_c.svg" alt="Secure Container AD"
+                style="max-height: 24px; margin-bottom: var(--s3); object-fit: contain; object-position: left;">
+              <p style="font-size: 14px; color: var(--c-text-muted); line-height: 1.6; margin: 0;">
+                Deleting work and end-of-life data in the isolated area generated on the PC. Secure access to your
+                business resources with our unique VPN feature. Compared to VDI and DaaS, it operates at a lower cost
+                and is quicker and more comfortable.
+              </p>
+            </div>
+            <div style="flex: 1 1 200px; display: flex; align-items: center; justify-content: center;">
+              <img src="Assets/images/device_cscad.webp" alt="Dataless Client AD"
+                style="max-width: 100%; height: auto;">
+            </div>
+          </div>
+          <div style="text-align: center; margin-top: auto; padding-top: var(--s2);">
+            <a href="#" class="btn btn-primary" style="padding: 10px 24px; font-size: 14px;">View in detail <span
+                class="material-symbols-outlined"
+                style="margin-left: 4px; font-size: 18px; vertical-align: middle;">chevron_right</span></a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="hover-lift fade-up"
+          style="background: #fff; padding: var(--s4); border-radius: var(--r-md); border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div style="margin-bottom: var(--s3);">
+            <h3 style="font-size: 20px; font-weight: 600; color: var(--c-text); margin-bottom: 4px;">Access to a
+              separate environment with a single device</h3>
+            <div style="font-size: 18px; font-weight: 600; color: #9c9cbf;">Dataless Client</div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: var(--s3); margin-bottom: var(--s3); flex-grow: 1;">
+            <div style="flex: 1 1 200px; display: flex; flex-direction: column; justify-content: center;">
+              <img src="Assets/images/logo_cscsw_h_c.svg" alt="Secure Container Switch"
+                style="max-height: 24px; margin-bottom: var(--s3); object-fit: contain; object-position: left;">
+              <p style="font-size: 14px; color: var(--c-text-muted); line-height: 1.6; margin: 0;">
+                We created an isolated work area using a dedicated Windows account, allowing you to work on two isolated
+                networks using a single device. Security and convenience can be combined to improve operational
+                efficiency.
+              </p>
+            </div>
+            <div style="flex: 1 1 200px; display: flex; align-items: center; justify-content: center;">
+              <img src="Assets/images/device_cscsw.webp" alt="Dataless Client Switch"
+                style="max-width: 100%; height: auto;">
+            </div>
+          </div>
+          <div style="text-align: center; margin-top: auto; padding-top: var(--s2);">
+            <a href="#" class="btn btn-primary" style="padding: 10px 24px; font-size: 14px;">View in detail <span
+                class="material-symbols-outlined"
+                style="margin-left: 4px; font-size: 18px; vertical-align: middle;">chevron_right</span></a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="hover-lift fade-up"
+          style="background: #fff; padding: var(--s4); border-radius: var(--r-md); border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div style="margin-bottom: var(--s3);">
+            <h3 style="font-size: 20px; font-weight: 600; color: var(--c-text); margin-bottom: 4px;">VPN device on the
+              Internet</h3>
+            <div style="font-size: 18px; font-weight: 600; color: #e56399;">Secure VPN that doesn't publish</div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: var(--s3); margin-bottom: var(--s3); flex-grow: 1;">
+            <div style="flex: 1 1 200px; display: flex; flex-direction: column; justify-content: center;">
+              <img src="Assets/images/logo_ncvpn_h_c.svg" alt="NinjaConnect VPN"
+                style="max-height: 24px; margin-bottom: var(--s3); object-fit: contain; object-position: left;">
+              <p style="font-size: 14px; color: var(--c-text-muted); line-height: 1.6; margin: 0;">
+                A cloud VPN service that does not expose VPN devices, eliminating security threats such as ransomware.
+              </p>
+            </div>
+            <div style="flex: 1 1 200px; display: flex; align-items: center; justify-content: center;">
+              <img src="Assets/images/device_ncvpn_c1.webp" alt="NinjaConnect VPN"
+                style="max-width: 100%; height: auto;">
+            </div>
+          </div>
+          <div style="text-align: center; margin-top: auto; padding-top: var(--s2);">
+            <a href="#" class="btn btn-primary" style="padding: 10px 24px; font-size: 14px;">View in detail <span
+                class="material-symbols-outlined"
+                style="margin-left: 4px; font-size: 18px; vertical-align: middle;">chevron_right</span></a>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="hover-lift fade-up"
+          style="background: #fff; padding: var(--s4); border-radius: var(--r-md); border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div style="margin-bottom: var(--s3);">
+            <h3 style="font-size: 20px; font-weight: 600; color: var(--c-text); margin-bottom: 4px;">Simple features
+              with great pricing</h3>
+            <div style="font-size: 18px; font-weight: 600; color: #f09b00;">Remote Desktop</div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: var(--s3); margin-bottom: var(--s3); flex-grow: 1;">
+            <div style="flex: 1 1 200px; display: flex; flex-direction: column; justify-content: center;">
+              <img src="Assets/images/logo_crd_h_c.svg" alt="Remote Desktop"
+                style="max-height: 24px; margin-bottom: var(--s3); object-fit: contain; object-position: left;">
+              <p style="font-size: 14px; color: var(--c-text-muted); line-height: 1.6; margin: 0;">
+                Recommended for shift telework. The fee is based on the number of simultaneous connections, is low cost,
+                and no app installation is required on the work PC.
+              </p>
+            </div>
+            <div style="flex: 1 1 200px; display: flex; align-items: center; justify-content: center;">
+              <img src="Assets/images/device_crd.webp" alt="Remote Desktop" style="max-width: 100%; height: auto;">
+            </div>
+          </div>
+          <div style="text-align: center; margin-top: auto; padding-top: var(--s2);">
+            <a href="#" class="btn btn-primary" style="padding: 10px 24px; font-size: 14px;">View in detail <span
+                class="material-symbols-outlined"
+                style="margin-left: 4px; font-size: 18px; vertical-align: middle;">chevron_right</span></a>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="hover-lift fade-up"
+          style="background: #fff; padding: var(--s4); border-radius: var(--r-md); border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div style="margin-bottom: var(--s3);">
+            <h3 style="font-size: 20px; font-weight: 600; color: var(--c-text); margin-bottom: 4px;">Enhanced security
+              and convenient functions</h3>
+            <div style="font-size: 18px; font-weight: 600; color: #00b386;">Remote Desktop</div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: var(--s3); margin-bottom: var(--s3); flex-grow: 1;">
+            <div style="flex: 1 1 200px; display: flex; flex-direction: column; justify-content: center;">
+              <img src="Assets/images/logo_sfc_v_b.svg" alt="Splashtop for CACHATTO"
+                style="max-height: 48px; margin-bottom: var(--s3); object-fit: contain; object-position: left;">
+              <p style="font-size: 14px; color: var(--c-text-muted); line-height: 1.6; margin: 0;">
+                A high-performance remote desktop that combines Splashtop with CACHATTO's security and operations
+                management functions. High-speed drawing allows for comfortable remote operation of CAD and other
+                applications.
+              </p>
+            </div>
+            <div style="flex: 1 1 200px; display: flex; align-items: center; justify-content: center;">
+              <img src="Assets/images/device_sfc_c1.webp" alt="Splashtop for CACHATTO"
+                style="max-width: 100%; height: auto;">
+            </div>
+          </div>
+          <div style="text-align: center; margin-top: auto; padding-top: var(--s2);">
+            <a href="#" class="btn btn-primary" style="padding: 10px 24px; font-size: 14px;">View in detail <span
+                class="material-symbols-outlined"
+                style="margin-left: 4px; font-size: 18px; vertical-align: middle;">chevron_right</span></a>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="hover-lift fade-up"
+          style="background: #fff; padding: var(--s4); border-radius: var(--r-md); border: 1px solid rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+          <div style="margin-bottom: var(--s3);">
+            <h3 style="font-size: 20px; font-weight: 600; color: var(--c-text); margin-bottom: 4px;">Ideal for minor
+              tasks with gap time</h3>
+            <div style="font-size: 18px; font-weight: 600; color: #1e61e0;">Secure Browser</div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: var(--s3); margin-bottom: var(--s3); flex-grow: 1;">
+            <div style="flex: 1 1 200px; display: flex; flex-direction: column; justify-content: center;">
+              <img src="Assets/images/logo_csb_h_c.svg" alt="Secure Browser"
+                style="max-height: 24px; margin-bottom: var(--s3); object-fit: contain; object-position: left;">
+              <p style="font-size: 14px; color: var(--c-text-muted); line-height: 1.6; margin: 0;">
+                Specializing in minor web-based tasks. Not only can you use groupware and web systems, but you can also
+                edit Office files.
+              </p>
+            </div>
+            <div style="flex: 1 1 200px; display: flex; align-items: center; justify-content: center;">
+              <img src="Assets/images/device_csb_c1.webp" alt="Secure Browser" style="max-width: 100%; height: auto;">
+            </div>
+          </div>
+          <div style="text-align: center; margin-top: auto; padding-top: var(--s2);">
+            <a href="#" class="btn btn-primary" style="padding: 10px 24px; font-size: 14px;">View in detail <span
+                class="material-symbols-outlined"
+                style="margin-left: 4px; font-size: 18px; vertical-align: middle;">chevron_right</span></a>
+          </div>
+        </article>
+      </div>
+
+      <div class="fade-up text-left"
+        style="font-size: 13px; color: var(--c-text-muted); line-height: 1.6; margin-bottom: var(--s4); max-width: 900px; margin-left: auto; margin-right: auto;">
+        <p style="margin: 0 0 4px;">※ Some specifications may differ from the tools and services provided by traditional
+          CACHATTO.</p>
+        <p style="margin: 0 0 4px;">※ Secure browsers are "Secure Browser" for Windows and "Secure Browser" for
+          smartphones CACHATTO One Browser There is a. The CACHATTO One browser is a newly designed secure browser for
+          smartphones that specializes in portal access.</p>
+        <p style="margin: 0;">PC business tools include the CACHATTO One browser, a smartphone application, as standard.
+          You can also purchase it using the CACHATTO One browser alone.</p>
+      </div>
+
+      <div class="text-center fade-up" style="margin-bottom: var(--s5);">
+        <a href="#" class="btn btn-primary" style="padding: 16px 32px; font-size: 16px;">
+          A closer look at our product lineup
+          <span class="material-symbols-outlined" style="margin-left: 8px; vertical-align: middle;">chevron_right</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+     BENEFITS SECTION
+════════════════════════════════════════════════════════════ -->
+  <section class="section section--light-gray" id="benefits">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 var(--s4);">
+      <div class="section-header">
+        <div class="eyebrow">
+          <span class="material-symbols-outlined" aria-hidden="true">stars</span>
+          3 Key Benefits
+        </div>
+        <h2 class="section-title">Why Organizations Choose CACHATTO One</h2>
+        <p class="section-desc">
+          CACHATTO One is built for the way teams actually work.
+        </p>
+      </div>
+
+      <div class="merits-grid">
+        <!-- Benefit 1 -->
+        <article class="merit-card fade-up d1">
+          <div class="merit-num">01</div>
+          <h3>Operational Efficiency</h3>
+          <p>Empower every employee to work from any location, on the business tools they rely on daily — with no
+            reduction in performance or experience.</p>
+          <ul class="merit-list">
+            <li>
+              <span class="material-symbols-outlined">check_circle</span>
+              Access any business service from any location
+            </li>
+            <li>
+              <span class="material-symbols-outlined">check_circle</span>
+              Lightweight smartphone access for on-the-go tasks
+            </li>
+            <li>
+              <span class="material-symbols-outlined">check_circle</span>
+              Intuitive interfaces users don't need to learn
+            </li>
+          </ul>
+          <a href="#" class="btn btn-outline"
+            style="border-radius: 999px; padding: 10px 24px; font-size: 14px; text-align: left; color: var(--c-blue); border: 1px solid var(--c-blue); background: transparent; width: 100%; display: flex; justify-content: flex-start; align-items: center; gap: 4px; margin-top: auto;">View
+            Products <span
+              style="font-family: Arial, sans-serif; font-size: 16px; margin-top: -2px;">&rsaquo;</span></a>
+        </article>
+
+        <!-- Benefit 2 -->
+        <article class="merit-card fade-up d2">
+          <div class="merit-num">02</div>
+          <h3>Zero Data Leakage Risk</h3>
+          <p>Data never resides on endpoint devices. Loss or theft of a device does not mean loss of data. Strict
+            authentication blocks unauthorized access at every layer.</p>
+          <ul class="merit-list">
+            <li>
+              <span class="material-symbols-outlined">check_circle</span>
+              No data left on device — safe even if stolen or lost
+            </li>
+            <li>
+              <span class="material-symbols-outlined">check_circle</span>
+              MFA and security checks block unauthorized access
+            </li>
+            <li>
+              <span class="material-symbols-outlined">check_circle</span>
+              No security-weakening infrastructure changes needed
+            </li>
+          </ul>
+          <a href="#" class="btn btn-outline"
+            style="border-radius: 999px; padding: 10px 24px; font-size: 14px; text-align: left; color: var(--c-blue); border: 1px solid var(--c-blue); background: transparent; width: 100%; display: flex; justify-content: flex-start; align-items: center; gap: 4px; margin-top: auto;">View
+            Security <span
+              style="font-family: Arial, sans-serif; font-size: 16px; margin-top: -2px;">&rsaquo;</span></a>
+        </article>
+
+        <!-- Benefit 3 -->
+        <article class="merit-card fade-up d3">
+          <div class="merit-num">03</div>
+          <h3>Lighter IT Overhead</h3>
+          <p>Consolidate management of all remote access tools into one cloud console. Support BYOD without managing
+            individual devices. Reduce operational burden significantly.</p>
+          <ul class="merit-list">
+            <li>
+              <span class="material-symbols-outlined">check_circle</span>
+              All tools unified in one management console
+            </li>
+            <li>
+              <span class="material-symbols-outlined">check_circle</span>
+              BYOD support reduces device management workload
+            </li>
+            <li>
+              <span class="material-symbols-outlined">check_circle</span>
+              Expert support team backs every deployment
+            </li>
+          </ul>
+          <a href="#" class="btn btn-outline"
+            style="border-radius: 999px; padding: 10px 24px; font-size: 14px; text-align: left; color: var(--c-blue); border: 1px solid var(--c-blue); background: transparent; width: 100%; display: flex; justify-content: flex-start; align-items: center; gap: 4px; margin-top: auto;">Support
+            & Management <span
+              style="font-family: Arial, sans-serif; font-size: 16px; margin-top: -2px;">&rsaquo;</span></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════
+     6. IDEAL CUSTOMERS — dark
+  ════════════════════════════════════════════════════════ -->
+  <section class="section section--dark" id="customers" style="position:relative; overflow:hidden;">
+    <div class="hero__grid-bg" aria-hidden="true"></div>
+    <div
+      style="position:absolute; inset:0; pointer-events:none; background: radial-gradient(ellipse 70% 80% at 50% 50%, rgba(0,153,230,0.10) 0%, transparent 70%);"
+      aria-hidden="true"></div>
+    <div class="container" style="position:relative; z-index:1;">
+      <div class="customers-header">
+        <div class="eyebrow eyebrow--light">
+          <span class="material-symbols-outlined">groups</span>
+          Ideal For
+        </div>
+        <h2 class="section-title section-title--white">Is CACHATTO One Right for You?</h2>
+        <p class="section-desc section-desc--white">Best suited for organizations reviewing their remote access setup,
+          improving hybrid work, or replacing costly legacy tools.</p>
+      </div>
+
+      <div class="customers-grid">
+        <div class="customer-card fade-up d1">
+          <div class="customer-card__icon"><span class="material-symbols-outlined">history</span></div>
+          <p>Hastily deployed a telework environment during COVID-19 and now want to review and optimize it properly.
+          </p>
+        </div>
+        <div class="customer-card fade-up d2">
+          <div class="customer-card__icon"><span class="material-symbols-outlined">price_check</span></div>
+          <p>Want to improve cost, usability, and operational efficiency of the current remote work environment.</p>
+        </div>
+        <div class="customer-card fade-up d3">
+          <div class="customer-card__icon"><span class="material-symbols-outlined">compare_arrows</span></div>
+          <p>VDI/DaaS, remote desktop, or VPN price hikes are forcing a migration — looking for a reliable replacement.
+          </p>
+        </div>
+        <div class="customer-card fade-up d4">
+          <div class="customer-card__icon"><span class="material-symbols-outlined">support_agent</span></div>
+          <p>Don't have the IT headcount to manage a complex remote access environment — need low-overhead operations.
+          </p>
+        </div>
+        <div class="customer-card fade-up d5">
+          <div class="customer-card__icon"><span class="material-symbols-outlined">family_restroom</span></div>
+          <p>Seeking flexible work solutions aligned with revised childcare and nursing care leave legislation reforms.
+          </p>
+        </div>
+        <div class="customer-card fade-up d6">
+          <div class="customer-card__icon"><span class="material-symbols-outlined">lan</span></div>
+          <p>Need secure telework within a network-isolated environment — especially in government or regulated
+            industries.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+     USE CASES SECTION
+════════════════════════════════════════════════════════════ -->
+  <section class="section usecases-section section--light-gray" id="usecases">
+    <div class="section-header">
+      <div class="eyebrow">
+        <span class="material-symbols-outlined" aria-hidden="true">workspaces</span>
+        Use Cases
+      </div>
+      <h2 class="section-title">Solving Your Challenges</h2>
+      <p class="section-desc">
+        How CACHATTO One addresses the most pressing concerns in modern enterprise infrastructure.
+      </p>
+    </div>
+
+    <div class="usecases-grid">
+      <!-- Case 1 -->
+      <article class="uc-card fade-up d1">
+        <div class="uc-card__body">
+          <div class="uc-card__top">
+            <div class="uc-card__icon-box" aria-hidden="true" style="background: var(--c-blue); color: white;">
+              <span class="material-symbols-outlined">vpn_key_off</span>
+            </div>
+            <span class="uc-card__tag">Remote Work</span>
+          </div>
+          <h3 class="uc-card__title">Remote Work Issues</h3>
+          <p class="uc-card__desc">
+            Overcome legacy VPN bottlenecks, frequent disconnections, and unreliable access when employees connect from
+            outside the corporate perimeter.
+          </p>
+        </div>
+      </article>
+
+      <!-- Case 2 -->
+      <article class="uc-card fade-up d2">
+        <div class="uc-card__body">
+          <div class="uc-card__top">
+            <div class="uc-card__icon-box" aria-hidden="true" style="background: var(--c-blue); color: white;">
+              <span class="material-symbols-outlined">payments</span>
+            </div>
+            <span class="uc-card__tag">Cost Optimization</span>
+          </div>
+          <h3 class="uc-card__title">Cost Concerns</h3>
+          <p class="uc-card__desc">
+            Consolidate overlapping point solutions into a single platform. Assign licenses dynamically based on actual
+            employee needs instead of blanket purchases.
+          </p>
+        </div>
+      </article>
+
+      <!-- Case 3 -->
+      <article class="uc-card fade-up d3">
+        <div class="uc-card__body">
+          <div class="uc-card__top">
+            <div class="uc-card__icon-box" aria-hidden="true" style="background: var(--c-blue); color: white;">
+              <span class="material-symbols-outlined">autorenew</span>
+            </div>
+            <span class="uc-card__tag">Modernization</span>
+          </div>
+          <h3 class="uc-card__title">Tool Replacement</h3>
+          <p class="uc-card__desc">
+            Smoothly migrate away from outdated or unmaintained remote access tools without disrupting the current
+            workflow or compromising security.
+          </p>
+        </div>
+      </article>
+
+      <!-- Case 4 -->
+      <article class="uc-card fade-up d1">
+        <div class="uc-card__body">
+          <div class="uc-card__top">
+            <div class="uc-card__icon-box" aria-hidden="true" style="background: var(--c-blue); color: white;">
+              <span class="material-symbols-outlined">manage_history</span>
+            </div>
+            <span class="uc-card__tag">Administration</span>
+          </div>
+          <h3 class="uc-card__title">Management Overhead</h3>
+          <p class="uc-card__desc">
+            Reduce the burden on IT departments with a single pane of glass for monitoring, auditing, and enforcing
+            policies across all remote access methods.
+          </p>
+        </div>
+      </article>
+
+      <!-- Case 5 -->
+      <article class="uc-card fade-up d2">
+        <div class="uc-card__body">
+          <div class="uc-card__top">
+            <div class="uc-card__icon-box" aria-hidden="true" style="background: var(--c-blue); color: white;">
+              <span class="material-symbols-outlined">rule</span>
+            </div>
+            <span class="uc-card__tag">Security Standard</span>
+          </div>
+          <h3 class="uc-card__title">Compliance</h3>
+          <p class="uc-card__desc">
+            Ensure regulatory compliance by preventing data leakage and keeping an immutable audit trail of all access
+            across BYOD and corporate devices.
+          </p>
+        </div>
+      </article>
+
+      <!-- Case 6 -->
+      <article class="uc-card fade-up d3">
+        <div class="uc-card__body">
+          <div class="uc-card__top">
+            <div class="uc-card__icon-box" aria-hidden="true" style="background: var(--c-blue); color: white;">
+              <span class="material-symbols-outlined">lan</span>
+            </div>
+            <span class="uc-card__tag">Architecture</span>
+          </div>
+          <h3 class="uc-card__title">Network Separation</h3>
+          <p class="uc-card__desc">
+            Maintain strict airgaps and logical separation between OT and IT environments while still allowing
+            authorized operational oversight securely.
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+     FINAL CTA BANNER
+════════════════════════════════════════════════════════════ -->
+  <section class="cta-banner" id="cta" aria-labelledby="ctaTitle">
+    <div class="cta-banner__inner">
+      <div class="cta-banner__eyebrow">
+        <span class="material-symbols-outlined" aria-hidden="true">support_agent</span>
+        Ready to Transform?
+      </div>
+      <h2 id="ctaTitle">Start with CACHATTO One</h2>
+      <p>Enhance productivity and secure your enterprise seamlessly. Contact our experts to learn more or request a
+        trial.</p>
+      <div class="cta-banner__ctas">
+        <a href="#contact" class="btn btn-white">
+          <span class="material-symbols-outlined" aria-hidden="true">rocket_launch</span>
+          Free Trial
+        </a>
+        <a href="#contact" class="btn btn-outline-white">
+          <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+          Contact Us
+        </a>
+        <a href="brochure_cachatto_one.html" class="btn btn-outline-white">
+          <span class="material-symbols-outlined" aria-hidden="true">download</span>
+          Download Brochure
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+  <footer class="footer" id="contact" role="contentinfo">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="assets/images/logos/logo_c1_h_clr.svg" alt="CACHATTO" width="130" height="26" />
+        </div>
+        <p class="footer__tagline">
+          Secure Unified Digital Workspace. Empowering enterprise teams with zero-trust access, data protection, and
+          scalable security since 2004.
+        </p>
+        <div class="footer__social" aria-label="Social media links">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Twitter">𝕏</a>
+          <a href="#" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__col-title">Products</div>
+        <ul>
+          <li><a href="cachatto.html">CACHATTO</a></li>
+          <li><a href="cachatto-one.html">CACHATTO One</a></li>
+          <li><a href="index.html#hero">NinjaConnect Telework</a></li>
+          <li><a href="index.html#hero">NinjaConnect ISM</a></li>
+          <li><a href="#">Secure File Connect</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__col-title">Solutions</div>
+        <ul>
+          <li><a href="#">Remote Work Security</a></li>
+          <li><a href="#">BYOD &amp; Unmanaged Devices</a></li>
+          <li><a href="#">Zero Trust Access</a></li>
+          <li><a href="#">IT-OT Security</a></li>
+          <li><a href="#">Compliance</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <div class="footer__col-title">Company</div>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Customers</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span class="footer__copy">
+        &copy; 2025 e-Gate International Inc. All rights reserved.
+      </span>
+      <nav class="footer__legal" aria-label="Legal links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Cookie Settings</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+/* ══════════════════════════════════════════════
+       4. THREE MERITS — light-gray with Apple cards
+    ══════════════════════════════════════════════ */
+.merits-header {
+  text-align: center;
+  margin-bottom: 12px;
+}
+.merits-eyebrow {
+  text-align: center;
+  color: var(--c-text-muted);
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.merits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 52px;
+}
+@media (max-width: 900px) {
+  .merits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.merit-card {
+  background: var(--c-white);
+  border-radius: var(--r-xl);
+  padding: 40px 32px 36px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: transform 0.3s;
+  border: 1px solid rgba(0, 87, 184, 0.05);
+}
+.merit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.merit-num {
+  font-family: var(--font);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  color: #f0f2f5;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+}
+.merit-card h3 {
+  font-family: var(--font);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  color: var(--c-text);
+}
+.merit-card p {
+  font-size: 14px;
+  color: var(--c-text);
+  line-height: 1.58;
+  flex: 1;
+  margin-bottom: 24px;
+}
+.merit-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.merit-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--c-text);
+  line-height: 1.5;
+}
+.merit-list li .material-symbols-outlined {
+  font-size: 18px;
+  color: var(--c-blue);
+  flex-shrink: 0;
+  margin-top: 0;
+}
